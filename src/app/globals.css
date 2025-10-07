@@ -171,3 +171,17 @@ body {
     transform: scale(1);
   }
 }
+
+/* Add yellow outline on tap/touch for mobile */
+button:active,
+.card-container:active {
+  outline: 3px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+/* Also add it for hover on desktop */
+button:hover,
+.card-container:hover {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+}
