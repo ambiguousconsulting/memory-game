@@ -143,6 +143,11 @@ body {
   -webkit-transform: rotateY(180deg);
 }
 
+.card-flipped .card-front {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .card-front, .card-back {
   position: absolute;
   width: 100%;
