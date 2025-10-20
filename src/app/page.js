@@ -188,8 +188,11 @@ export default function MemoryGame() {
   const [showGiftBox, setShowGiftBox] = useState(false) // Show gift box animation
   const [giftBounces, setGiftBounces] = useState(0) // Track bounces
   const [giftOpened, setGiftOpened] = useState(false) // Track if gift is opened
+  const [hintCooldown, setHintCooldown] = useState(false) // Track hint cooldown
+  const [hintCooldownTime, setHintCooldownTime] = useState(0) // Show countdown seconds
   const timeoutRef = useRef(null)
   const countdownRef = useRef(null)
+  const hintCooldownRef = useRef(null)
   
 
   // Create audio context once
@@ -557,28 +560,30 @@ export default function MemoryGame() {
             // Single player logic
             setIsWon(true)
             if (true) { // Infinite levels
-              setCountdown(3)
-              
-              let timeLeft = 3
+              // Start countdown at 3
+              let currentCount = 3
+              setCountdown(currentCount)
+
               const countdownInterval = setInterval(() => {
-                timeLeft--
-                setCountdown(timeLeft)
-                
-                if (timeLeft <= 0) {
+                currentCount--
+
+                if (currentCount <= 0) {
                   clearInterval(countdownInterval)
+                  setCountdown(null)
+
+                  // Advance to next level
                   const newLevel = currentLevel + 1
-                  const remainingMoves = totalMovesAvailable - movesUsed - 1 // Subtract 1 for the winning move
+                  const remainingMoves = totalMovesAvailable - movesUsed - 1
                   const ageLevels = LEVELS[playerAge] || LEVELS['6-8']
-                  
+
                   if (ageLevels && ageLevels[newLevel - 1]) {
-                    const newLevelTries = newLevel * 4 // Level 1=4, Level 2=8, Level 3=12, etc.
-                    const totalMovesForNewLevel = remainingMoves + newLevelTries // Carry over + new level tries
-                    
+                    const newLevelTries = newLevel * 4
+                    const totalMovesForNewLevel = remainingMoves + newLevelTries
+
                     setCurrentLevel(newLevel)
                     setMovesUsed(0)
                     setTotalMovesAvailable(totalMovesForNewLevel)
-                    setCountdown(null)
-                    
+
                     // Shuffle cards for new level
                     const levelConfig = getCurrentLevelConfig(newLevel)
                     const requiredEmojis = THEMES[currentTheme].emojis.slice(0, levelConfig.pairs)
@@ -596,9 +601,11 @@ export default function MemoryGame() {
                     setIsWon(false)
                     setIsGameOver(false)
                   }
+                } else {
+                  setCountdown(currentCount)
                 }
               }, 1000)
-              
+
               countdownRef.current = countdownInterval
             }
           }
@@ -706,30 +713,49 @@ export default function MemoryGame() {
   }
 
   const useHelp = () => {
-    if (cards.length === 0) return
-    
+    if (cards.length === 0 || hintCooldown) return
+
+    // Set cooldown with countdown
+    setHintCooldown(true)
+    let timeLeft = 3
+    setHintCooldownTime(timeLeft)
+
+    const cooldownInterval = setInterval(() => {
+      timeLeft--
+
+      if (timeLeft <= 0) {
+        clearInterval(cooldownInterval)
+        setHintCooldown(false)
+        setHintCooldownTime(0)
+      } else {
+        setHintCooldownTime(timeLeft)
+      }
+    }, 1000)
+
+    hintCooldownRef.current = cooldownInterval
+
     // Check if there's already a flipped card that needs a match
     if (flippedCards.length === 1) {
       const flippedIndex = flippedCards[0]
       const flippedEmoji = cards[flippedIndex].emoji
-      
+
       // Find the matching card that's not flipped or matched
-      const matchingIndex = cards.findIndex((card, index) => 
-        card.emoji === flippedEmoji && 
-        index !== flippedIndex && 
+      const matchingIndex = cards.findIndex((card, index) =>
+        card.emoji === flippedEmoji &&
+        index !== flippedIndex &&
         !matchedCards.includes(index)
       )
-      
+
       if (matchingIndex !== -1) {
         // Highlight the matching card
         setHelpRevealed([matchingIndex])
         setHelpUsed(prev => prev + 1)
-        
+
         // Hide the help after 3 seconds
         setTimeout(() => {
           setHelpRevealed([])
         }, 3000)
-        
+
         // In multiplayer, switch turns after using help
         if (gameMode === 'multiplayer') {
           setTimeout(() => {
@@ -739,29 +765,29 @@ export default function MemoryGame() {
         return
       }
     }
-    
+
     // If no card is flipped, highlight a random unmatched pair
     const emojisInPlay = cards.map(card => card.emoji)
     const availableEmojis = [...new Set(emojisInPlay)].filter(emoji => {
       const indices = cards.map((card, index) => card.emoji === emoji ? index : -1).filter(i => i !== -1)
       return !indices.some(i => matchedCards.includes(i))
     })
-    
+
     if (availableEmojis.length === 0) return
-    
+
     // Pick the first available emoji and highlight both cards
     const targetEmoji = availableEmojis[0]
     const pairIndices = cards.map((card, index) => card.emoji === targetEmoji ? index : -1).filter(i => i !== -1)
-    
+
     // Highlight both cards of the pair
     setHelpRevealed(pairIndices)
     setHelpUsed(prev => prev + 1)
-    
+
     // Hide the help after 3 seconds
     setTimeout(() => {
       setHelpRevealed([])
     }, 3000)
-    
+
     // In multiplayer, switch turns after using help
     if (gameMode === 'multiplayer') {
       setTimeout(() => {
@@ -1309,7 +1335,7 @@ export default function MemoryGame() {
           </div>
         </div>
       )}
-      
+
       <div className="flex flex-col h-full">
         <div className="flex justify-between items-center mb-1">
           <button
@@ -1434,9 +1460,14 @@ export default function MemoryGame() {
                   🎯 Keep playing! First to 10 wins!
                 </p>
               )}
-              <p className="text-white text-xl mt-2 font-bold">
-                {countdown ? `🚀 Next adventure in ${countdown}...` : '🚀 Getting ready for your next adventure...'}
-              </p>
+              {countdown && (
+                <div className="text-center mt-4">
+                  <p className="text-white text-2xl font-bold mb-2">Next level starting in...</p>
+                  <div className="text-8xl font-black text-yellow-300 animate-pulse">
+                    {countdown}
+                  </div>
+                </div>
+              )}
             </div>
           )}
           
@@ -1700,16 +1731,42 @@ export default function MemoryGame() {
             onClick={resetLevel}
             className="bg-white text-purple-600 font-bold py-1 px-3 rounded text-sm hover:bg-gray-100 transition-colors"
           >
-            Reset Level
+            🔄 Reset Level
           </button>
-          
+
+          <button
+            onClick={() => {
+              if (window.confirm('Are you sure you want to go back to Level 1? Your progress will be saved.')) {
+                setCurrentLevel(1)
+                setMovesUsed(0)
+                setTotalMovesAvailable(4) // Level 1 gets 4 tries
+                setIsWon(false)
+                setIsGameOver(false)
+                if (countdownRef.current) {
+                  clearInterval(countdownRef.current)
+                  setCountdown(null)
+                }
+                shuffleCards(1)
+                playSound('click', 0.2)
+              }
+            }}
+            className="bg-orange-500 text-white font-bold py-1 px-3 rounded text-sm hover:bg-orange-600 transition-colors"
+          >
+            🏠 Back to Level 1
+          </button>
+
           {/* Help button - only show for 3-5 age group */}
           {playerAge === '3-5' && (
             <button
               onClick={useHelp}
-              className="bg-blue-500 text-white font-bold py-1 px-3 rounded text-sm hover:bg-blue-600 transition-colors"
+              disabled={hintCooldown}
+              className={`font-bold py-1 px-3 rounded text-sm transition-colors ${
+                hintCooldown
+                  ? 'bg-gray-400 text-gray-200 cursor-not-allowed'
+                  : 'bg-blue-500 text-white hover:bg-blue-600'
+              }`}
             >
-              💡 Help
+              💡 Help {hintCooldown ? `(${hintCooldownTime}s)` : ''}
             </button>
           )}
         </div>
