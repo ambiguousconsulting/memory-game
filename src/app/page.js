@@ -190,6 +190,21 @@ export default function MemoryGame() {
   const [giftOpened, setGiftOpened] = useState(false) // Track if gift is opened
   const [hintCooldown, setHintCooldown] = useState(false) // Track hint cooldown
   const [hintCooldownTime, setHintCooldownTime] = useState(0) // Show countdown seconds
+  const [showResetConfirm, setShowResetConfirm] = useState(false) // Show reset to level 1 confirmation
+
+  // Inventory system
+  const [inventory, setInventory] = useState({
+    apples: 0,
+    berries: 0,
+    fish: 0,
+    gems: 0,
+    treasures: 0,
+    mystery: 0
+  })
+  const [showItemCollected, setShowItemCollected] = useState(false)
+  const [collectedItem, setCollectedItem] = useState(null)
+  const [showInventory, setShowInventory] = useState(false) // Show inventory modal
+
   const timeoutRef = useRef(null)
   const countdownRef = useRef(null)
   const hintCooldownRef = useRef(null)
@@ -258,6 +273,16 @@ export default function MemoryGame() {
         }
       }
 
+      // Load inventory
+      const savedInventory = localStorage.getItem('memoryGame_inventory')
+      if (savedInventory) {
+        try {
+          setInventory(JSON.parse(savedInventory))
+        } catch (e) {
+          console.log('Error loading inventory:', e)
+        }
+      }
+
       setIsLoaded(true)
     }
   }, [])
@@ -303,6 +328,13 @@ export default function MemoryGame() {
       localStorage.setItem('memoryGame_starsEarned', JSON.stringify(starsEarned))
     }
   }, [starsEarned, isLoaded])
+
+  // Save inventory
+  useEffect(() => {
+    if (isLoaded && typeof window !== 'undefined') {
+      localStorage.setItem('memoryGame_inventory', JSON.stringify(inventory))
+    }
+  }, [inventory, isLoaded])
 
   // Safety check: reset to defaults if current selections are locked (only after loading)
   useEffect(() => {
@@ -469,6 +501,32 @@ export default function MemoryGame() {
         const newMatchedCards = [...matchedCards, first, second]
         setMatchedCards(newMatchedCards)
         setFlippedCards([])
+
+        // Award inventory item for perfect match - VERY RARE!
+        const isPerfectMatch = Math.random() < 0.05 // Only 5% chance for reward!
+        if (isPerfectMatch && gameMode === 'single') {
+          const itemTypes = [
+            { key: 'apples', emoji: '🍎', name: 'Apple' },
+            { key: 'berries', emoji: '🫐', name: 'Berries' },
+            { key: 'fish', emoji: '🐟', name: 'Fish' },
+            { key: 'gems', emoji: '💎', name: 'Gem' },
+            { key: 'treasures', emoji: '🏺', name: 'Treasure' },
+            { key: 'mystery', emoji: '🎁', name: 'Mystery Box' }
+          ]
+          const randomItem = itemTypes[Math.floor(Math.random() * itemTypes.length)]
+
+          setInventory(prev => ({
+            ...prev,
+            [randomItem.key]: prev[randomItem.key] + 1
+          }))
+
+          setCollectedItem(randomItem)
+          setShowItemCollected(true)
+
+          setTimeout(() => {
+            setShowItemCollected(false)
+          }, 2000)
+        }
 
         // In multiplayer, ALWAYS award the point for a match
         if (gameMode === 'multiplayer') {
@@ -891,11 +949,11 @@ export default function MemoryGame() {
   }
   
   const { cols, rows } = getOptimalGrid(totalCards)
-  const availableHeight = Math.min(windowSize.height * 0.6, 500) // Reduced height for smaller cards
-  const availableWidth = Math.min(windowSize.width * 0.85, 600)   // Reduced width for smaller cards
+  const availableHeight = Math.min(windowSize.height * 0.5, 400) // Smaller height for cards
+  const availableWidth = Math.min(windowSize.width * 0.85, 550)   // Smaller width for cards
   const cardWidth = (availableWidth - (cols - 1) * 2) / cols
   const cardHeight = (availableHeight - (rows - 1) * 2) / rows
-  const cardSize = Math.min(cardWidth, cardHeight)
+  const cardSize = Math.min(cardWidth, cardHeight, 80) // Max card size of 80px
 
   // Settings screen - check FIRST before main menu
   if (showSettings) {
@@ -1336,6 +1394,104 @@ export default function MemoryGame() {
         </div>
       )}
 
+      {/* Item Collected Popup */}
+      {showItemCollected && collectedItem && (
+        <div className="fixed top-20 left-1/2 transform -translate-x-1/2 z-[9999] pointer-events-none">
+          <div className="bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl p-4 shadow-2xl animate-bounce border-4 border-white">
+            <div className="text-5xl mb-2">{collectedItem.emoji}</div>
+            <p className="text-xl font-bold text-purple-800">+1 {collectedItem.name}!</p>
+          </div>
+        </div>
+      )}
+
+      {/* Inventory Modal */}
+      {showInventory && (
+        <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[9999]">
+          <div className="bg-gradient-to-br from-amber-100 via-yellow-100 to-orange-100 rounded-3xl p-8 max-w-2xl w-full mx-4 shadow-2xl border-4 border-amber-600">
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-4xl font-bold text-amber-900 flex items-center gap-2">
+                🎒 My Backpack
+              </h2>
+              <button
+                onClick={() => setShowInventory(false)}
+                className="bg-red-500 text-white font-bold py-2 px-4 rounded-xl hover:bg-red-600 transition-colors"
+              >
+                ✕ Close
+              </button>
+            </div>
+
+            <div className="grid grid-cols-3 gap-4">
+              {[
+                { key: 'apples', emoji: '🍎', name: 'Apples' },
+                { key: 'berries', emoji: '🫐', name: 'Berries' },
+                { key: 'fish', emoji: '🐟', name: 'Fish' },
+                { key: 'gems', emoji: '💎', name: 'Gems' },
+                { key: 'treasures', emoji: '🏺', name: 'Treasures' },
+                { key: 'mystery', emoji: '🎁', name: 'Mystery Boxes' }
+              ].map(item => (
+                <div
+                  key={item.key}
+                  className="bg-white rounded-2xl p-6 text-center shadow-lg border-4 border-amber-400 hover:scale-105 transition-transform"
+                >
+                  <div className="text-6xl mb-3">{item.emoji}</div>
+                  <p className="text-lg font-bold text-amber-900">{item.name}</p>
+                  <div className="text-3xl font-black text-green-600 mt-2">
+                    {inventory[item.key]}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-6 text-center">
+              <p className="text-amber-800 text-sm">
+                💡 Collect rare items by matching cards perfectly!
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Reset to Level 1 Confirmation Popup */}
+      {showResetConfirm && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999]">
+          <div className="bg-gradient-to-br from-yellow-300 via-pink-300 to-purple-400 rounded-3xl p-8 max-w-md text-center shadow-2xl border-4 border-white">
+            <div className="text-6xl mb-4">🏠</div>
+            <h2 className="text-3xl font-bold text-purple-800 mb-4">Start Over at Level 1?</h2>
+            <p className="text-xl text-purple-700 mb-6">No worries! Your unlocks are safe! 😊</p>
+            <div className="flex gap-4 justify-center">
+              <button
+                onClick={() => {
+                  setCurrentLevel(1)
+                  setMovesUsed(0)
+                  setTotalMovesAvailable(4)
+                  setIsWon(false)
+                  setIsGameOver(false)
+                  if (countdownRef.current) {
+                    clearInterval(countdownRef.current)
+                    setCountdown(null)
+                  }
+                  shuffleCards(1)
+                  playSound('click', 0.2)
+                  setShowResetConfirm(false)
+                }}
+                className="bg-green-500 text-white font-bold py-3 px-8 rounded-xl text-lg hover:bg-green-600 transition-all transform hover:scale-105 shadow-lg"
+              >
+                ✅ Yes, Let&apos;s Go!
+              </button>
+              <button
+                onClick={() => {
+                  setShowResetConfirm(false)
+                  playSound('click', 0.2)
+                }}
+                className="bg-red-500 text-white font-bold py-3 px-8 rounded-xl text-lg hover:bg-red-600 transition-all transform hover:scale-105 shadow-lg"
+              >
+                ❌ Never Mind
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="flex flex-col h-full">
         <div className="flex justify-between items-center mb-1">
           <button
@@ -1345,9 +1501,18 @@ export default function MemoryGame() {
             ⚙️ Settings
           </button>
           <h1 className="text-xl font-bold text-white">Memory Game</h1>
-          <div className="w-16"></div>
+          {gameMode === 'single' && (
+            <button
+              onClick={() => setShowInventory(true)}
+              className="bg-amber-600 text-white font-bold py-1 px-3 rounded text-sm hover:bg-amber-700 transition-colors shadow-lg"
+            >
+              🎒 Backpack
+            </button>
+          )}
+          {gameMode !== 'single' && <div className="w-16"></div>}
         </div>
-        
+
+
         <div className="text-center mb-2">
           {gameMode === 'single' && (
             <>
@@ -1736,19 +1901,7 @@ export default function MemoryGame() {
 
           <button
             onClick={() => {
-              if (window.confirm('Are you sure you want to go back to Level 1? Your progress will be saved.')) {
-                setCurrentLevel(1)
-                setMovesUsed(0)
-                setTotalMovesAvailable(4) // Level 1 gets 4 tries
-                setIsWon(false)
-                setIsGameOver(false)
-                if (countdownRef.current) {
-                  clearInterval(countdownRef.current)
-                  setCountdown(null)
-                }
-                shuffleCards(1)
-                playSound('click', 0.2)
-              }
+              setShowResetConfirm(true)
             }}
             className="bg-orange-500 text-white font-bold py-1 px-3 rounded text-sm hover:bg-orange-600 transition-colors"
           >
