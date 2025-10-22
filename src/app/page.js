@@ -191,6 +191,7 @@ export default function MemoryGame() {
   const [hintCooldown, setHintCooldown] = useState(false) // Track hint cooldown
   const [hintCooldownTime, setHintCooldownTime] = useState(0) // Show countdown seconds
   const [showResetConfirm, setShowResetConfirm] = useState(false) // Show reset to level 1 confirmation
+  const [showResetAllConfirm, setShowResetAllConfirm] = useState(false) // Show reset all progress confirmation
 
   // Inventory system
   const [inventory, setInventory] = useState({
@@ -210,6 +211,7 @@ export default function MemoryGame() {
   const [showBadgeEarned, setShowBadgeEarned] = useState(false)
   const [earnedBadge, setEarnedBadge] = useState(null)
   const [showBadges, setShowBadges] = useState(false) // Show badges modal
+  const [lastViewedBadgeCount, setLastViewedBadgeCount] = useState(0) // Track when user last viewed badges
 
   const timeoutRef = useRef(null)
   const countdownRef = useRef(null)
@@ -1455,31 +1457,7 @@ export default function MemoryGame() {
             {/* Reset Progress Button */}
             {highestLevelCompleted > 0 && (
               <button
-                onClick={() => {
-                  if (window.confirm('⚠️ Are you sure you want to reset ALL your progress? This will delete your levels, stars, and unlocks!')) {
-                    // Clear all saved data
-                    localStorage.removeItem('memoryGame_highestLevel')
-                    localStorage.removeItem('memoryGame_starsEarned')
-                    localStorage.removeItem('memoryGame_theme')
-                    localStorage.removeItem('memoryGame_cardColor')
-                    localStorage.removeItem('memoryGame_isSparkly')
-                    localStorage.removeItem('memoryGame_playerAge')
-
-                    // Reset all state
-                    setHighestLevelCompleted(0)
-                    setStarsEarned([])
-                    setCurrentTheme('starter')
-                    setCardColor('default')
-                    setIsSparkly(false)
-                    setPlayerAge('6-8')
-                    setCurrentLevel(1)
-                    setMovesUsed(0)
-                    setTotalMovesAvailable(4)
-
-                    playSound('click', 0.2)
-                    alert('✅ All progress has been reset!')
-                  }
-                }}
+                onClick={() => setShowResetAllConfirm(true)}
                 className="bg-red-500 text-white font-bold py-2 px-4 rounded-lg text-sm hover:bg-red-600 transition-colors"
               >
                 🔄 Reset All Progress
@@ -1722,6 +1700,69 @@ export default function MemoryGame() {
         </div>
       )}
 
+      {/* Reset All Progress Confirmation Popup */}
+      {showResetAllConfirm && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999]">
+          <div className="bg-gradient-to-br from-red-300 via-orange-300 to-yellow-300 rounded-3xl p-8 max-w-md text-center shadow-2xl border-4 border-red-600">
+            <div className="text-6xl mb-4">⚠️</div>
+            <h2 className="text-3xl font-bold text-red-800 mb-4">Reset Everything?</h2>
+            <p className="text-xl text-red-700 mb-2">This will delete:</p>
+            <p className="text-lg text-red-600 mb-6">
+              ⭐ All your levels<br/>
+              🎨 All unlocked themes<br/>
+              🏆 All achievements<br/>
+              🎒 All collected items
+            </p>
+            <p className="text-lg font-bold text-red-800 mb-6">Are you really sure? 🤔</p>
+            <div className="flex gap-4 justify-center">
+              <button
+                onClick={() => {
+                  // Clear all saved data
+                  localStorage.removeItem('memoryGame_highestLevel')
+                  localStorage.removeItem('memoryGame_starsEarned')
+                  localStorage.removeItem('memoryGame_theme')
+                  localStorage.removeItem('memoryGame_cardColor')
+                  localStorage.removeItem('memoryGame_isSparkly')
+                  localStorage.removeItem('memoryGame_playerAge')
+                  localStorage.removeItem('memoryGame_inventory')
+                  localStorage.removeItem('memoryGame_achievements')
+
+                  // Reset all state
+                  setHighestLevelCompleted(0)
+                  setStarsEarned([])
+                  setCurrentTheme('starter')
+                  setCardColor('default')
+                  setIsSparkly(false)
+                  setPlayerAge('6-8')
+                  setCurrentLevel(1)
+                  setMovesUsed(0)
+                  setTotalMovesAvailable(4)
+                  setInventory({ apples: 0, berries: 0, fish: 0, gems: 0, treasures: 0, mystery: 0 })
+                  setAchievements([])
+                  setLastViewedBadgeCount(0)
+
+                  playSound('click', 0.2)
+                  setShowResetAllConfirm(false)
+                  setShowSettings(false)
+                }}
+                className="bg-red-600 text-white font-bold py-3 px-8 rounded-xl text-lg hover:bg-red-700 transition-all transform hover:scale-105 shadow-lg"
+              >
+                ✅ Yes, Reset Everything
+              </button>
+              <button
+                onClick={() => {
+                  setShowResetAllConfirm(false)
+                  playSound('click', 0.2)
+                }}
+                className="bg-green-500 text-white font-bold py-3 px-8 rounded-xl text-lg hover:bg-green-600 transition-all transform hover:scale-105 shadow-lg"
+              >
+                ❌ Keep My Progress!
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="flex flex-col h-full">
         <div className="flex justify-between items-center mb-1">
           <button
@@ -1732,21 +1773,24 @@ export default function MemoryGame() {
           </button>
           <h1 className="text-xl font-bold text-white">Memory Game</h1>
           {gameMode === 'single' && (
-            <div className="flex gap-1">
+            <div className="flex gap-2">
               <button
                 onClick={() => setShowInventory(true)}
-                className="bg-amber-600 text-white font-bold py-1 px-2 rounded text-xs hover:bg-amber-700 transition-colors shadow-lg"
+                className="bg-amber-600 text-white font-bold py-2 px-3 rounded text-lg hover:bg-amber-700 transition-colors shadow-lg"
               >
                 🎒
               </button>
               <button
-                onClick={() => setShowBadges(true)}
-                className="bg-purple-600 text-white font-bold py-1 px-2 rounded text-xs hover:bg-purple-700 transition-colors shadow-lg relative"
+                onClick={() => {
+                  setShowBadges(true)
+                  setLastViewedBadgeCount(achievements.length)
+                }}
+                className="bg-purple-600 text-white font-bold py-2 px-3 rounded text-lg hover:bg-purple-700 transition-colors shadow-lg relative"
               >
                 🏆
-                {achievements.length > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
-                    {achievements.length}
+                {achievements.length > lastViewedBadgeCount && (
+                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
+                    {achievements.length - lastViewedBadgeCount}
                   </span>
                 )}
               </button>
