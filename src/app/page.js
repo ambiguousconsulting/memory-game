@@ -205,6 +205,12 @@ export default function MemoryGame() {
   const [collectedItem, setCollectedItem] = useState(null)
   const [showInventory, setShowInventory] = useState(false) // Show inventory modal
 
+  // Achievements/Badges system
+  const [achievements, setAchievements] = useState([])
+  const [showBadgeEarned, setShowBadgeEarned] = useState(false)
+  const [earnedBadge, setEarnedBadge] = useState(null)
+  const [showBadges, setShowBadges] = useState(false) // Show badges modal
+
   const timeoutRef = useRef(null)
   const countdownRef = useRef(null)
   const hintCooldownRef = useRef(null)
@@ -212,6 +218,36 @@ export default function MemoryGame() {
 
   // Create audio context once
   const audioContextRef = useRef(null)
+
+  // Define all possible achievements
+  const ALL_BADGES = {
+    firstMatch: { id: 'firstMatch', name: 'First Match!', emoji: '🎯', description: 'Made your first match' },
+    level5: { id: 'level5', name: 'Level 5 Hero', emoji: '⭐', description: 'Reached level 5' },
+    level10: { id: 'level10', name: 'Level 10 Master', emoji: '🏆', description: 'Reached level 10' },
+    perfectLevel: { id: 'perfectLevel', name: 'Perfect!', emoji: '✨', description: 'Got 3 stars on a level' },
+    firstItem: { id: 'firstItem', name: 'First Treasure', emoji: '💎', description: 'Collected your first item' },
+    collector: { id: 'collector', name: 'Collector', emoji: '🎒', description: 'Collected 10 total items' },
+    hoarder: { id: 'hoarder', name: 'Hoarder', emoji: '👑', description: 'Collected 50 total items' },
+    multiplayerWin: { id: 'multiplayerWin', name: 'Multiplayer Champion', emoji: '🎮', description: 'Won a multiplayer game' },
+    speedster: { id: 'speedster', name: 'Speedster', emoji: '⚡', description: 'Completed a level in under 10 moves' },
+    unlockTheme: { id: 'unlockTheme', name: 'Theme Collector', emoji: '🎨', description: 'Unlocked a new theme' },
+    gemFinder: { id: 'gemFinder', name: 'Gem Finder', emoji: '💍', description: 'Found 5 gems' },
+    fisherman: { id: 'fisherman', name: 'Fisherman', emoji: '🎣', description: 'Caught 5 fish' }
+  }
+
+  // Award badge function
+  const awardBadge = (badgeId) => {
+    if (!achievements.includes(badgeId)) {
+      setAchievements(prev => [...prev, badgeId])
+      setEarnedBadge(ALL_BADGES[badgeId])
+      setShowBadgeEarned(true)
+      playSound('badge', 0.5)
+
+      setTimeout(() => {
+        setShowBadgeEarned(false)
+      }, 3000)
+    }
+  }
 
   // Helper functions to check unlocks
   const isThemeUnlocked = (themeKey) => {
@@ -283,6 +319,16 @@ export default function MemoryGame() {
         }
       }
 
+      // Load achievements
+      const savedAchievements = localStorage.getItem('memoryGame_achievements')
+      if (savedAchievements) {
+        try {
+          setAchievements(JSON.parse(savedAchievements))
+        } catch (e) {
+          console.log('Error loading achievements:', e)
+        }
+      }
+
       setIsLoaded(true)
     }
   }, [])
@@ -336,6 +382,13 @@ export default function MemoryGame() {
     }
   }, [inventory, isLoaded])
 
+  // Save achievements
+  useEffect(() => {
+    if (isLoaded && typeof window !== 'undefined') {
+      localStorage.setItem('memoryGame_achievements', JSON.stringify(achievements))
+    }
+  }, [achievements, isLoaded])
+
   // Safety check: reset to defaults if current selections are locked (only after loading)
   useEffect(() => {
     if (isLoaded) {
@@ -374,41 +427,117 @@ export default function MemoryGame() {
       gainNode.connect(audioContext.destination)
       
       // Set frequency based on sound type
-      let frequency, duration
+      let frequency, duration, type = 'sine'
       switch (soundType) {
         case 'flip':
           frequency = 600
           duration = 0.15
+          type = 'sine'
           break
         case 'match':
+          // Happy chime sound
           frequency = 800
           duration = 0.3
+          type = 'triangle'
+          // Add a second tone for richness
+          setTimeout(() => {
+            const osc2 = audioContext.createOscillator()
+            const gain2 = audioContext.createGain()
+            osc2.connect(gain2)
+            gain2.connect(audioContext.destination)
+            osc2.frequency.setValueAtTime(1000, audioContext.currentTime)
+            osc2.type = 'sine'
+            gain2.gain.setValueAtTime(0, audioContext.currentTime)
+            gain2.gain.linearRampToValueAtTime(volume * 0.5, audioContext.currentTime + 0.01)
+            gain2.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.3)
+            osc2.start(audioContext.currentTime)
+            osc2.stop(audioContext.currentTime + 0.3)
+          }, 100)
           break
         case 'wrong':
           frequency = 250
           duration = 0.2
+          type = 'sawtooth'
           break
         case 'win':
+          // Victory fanfare
           frequency = 1000
           duration = 0.5
+          type = 'square'
+          // Add ascending tones
+          setTimeout(() => {
+            const osc2 = audioContext.createOscillator()
+            const gain2 = audioContext.createGain()
+            osc2.connect(gain2)
+            gain2.connect(audioContext.destination)
+            osc2.frequency.setValueAtTime(1200, audioContext.currentTime)
+            osc2.type = 'sine'
+            gain2.gain.setValueAtTime(0, audioContext.currentTime)
+            gain2.gain.linearRampToValueAtTime(volume * 0.6, audioContext.currentTime + 0.01)
+            gain2.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.4)
+            osc2.start(audioContext.currentTime)
+            osc2.stop(audioContext.currentTime + 0.4)
+          }, 150)
           break
         case 'click':
           frequency = 450
           duration = 0.1
+          type = 'sine'
+          break
+        case 'collect':
+          // Item collection sound - sparkly!
+          frequency = 1500
+          duration = 0.4
+          type = 'triangle'
+          // Add shimmer effect
+          setTimeout(() => {
+            const osc2 = audioContext.createOscillator()
+            const gain2 = audioContext.createGain()
+            osc2.connect(gain2)
+            gain2.connect(audioContext.destination)
+            osc2.frequency.setValueAtTime(1800, audioContext.currentTime)
+            osc2.type = 'sine'
+            gain2.gain.setValueAtTime(0, audioContext.currentTime)
+            gain2.gain.linearRampToValueAtTime(volume * 0.4, audioContext.currentTime + 0.01)
+            gain2.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.3)
+            osc2.start(audioContext.currentTime)
+            osc2.stop(audioContext.currentTime + 0.3)
+          }, 100)
+          break
+        case 'badge':
+          // Achievement unlocked sound - triumphant!
+          frequency = 1200
+          duration = 0.6
+          type = 'square'
+          // Add multiple tones
+          setTimeout(() => {
+            const osc2 = audioContext.createOscillator()
+            const gain2 = audioContext.createGain()
+            osc2.connect(gain2)
+            gain2.connect(audioContext.destination)
+            osc2.frequency.setValueAtTime(1500, audioContext.currentTime)
+            osc2.type = 'triangle'
+            gain2.gain.setValueAtTime(0, audioContext.currentTime)
+            gain2.gain.linearRampToValueAtTime(volume * 0.7, audioContext.currentTime + 0.01)
+            gain2.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.5)
+            osc2.start(audioContext.currentTime)
+            osc2.stop(audioContext.currentTime + 0.5)
+          }, 150)
           break
         default:
           frequency = 500
           duration = 0.15
+          type = 'sine'
       }
-      
+
       oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime)
-      oscillator.type = 'sine'
-      
+      oscillator.type = type
+
       // Set volume envelope
       gainNode.gain.setValueAtTime(0, audioContext.currentTime)
       gainNode.gain.linearRampToValueAtTime(volume, audioContext.currentTime + 0.01)
       gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + duration)
-      
+
       // Start and stop the oscillator
       oscillator.start(audioContext.currentTime)
       oscillator.stop(audioContext.currentTime + duration)
@@ -502,6 +631,11 @@ export default function MemoryGame() {
         setMatchedCards(newMatchedCards)
         setFlippedCards([])
 
+        // Award first match badge
+        if (matchedCards.length === 0) {
+          awardBadge('firstMatch')
+        }
+
         // Award inventory item for perfect match - VERY RARE!
         const isPerfectMatch = Math.random() < 0.05 // Only 5% chance for reward!
         if (isPerfectMatch && gameMode === 'single') {
@@ -522,6 +656,25 @@ export default function MemoryGame() {
 
           setCollectedItem(randomItem)
           setShowItemCollected(true)
+          playSound('collect', 0.4)
+
+          // Award first item badge
+          const totalItems = Object.values(inventory).reduce((sum, count) => sum + count, 0)
+          if (totalItems === 0) {
+            setTimeout(() => awardBadge('firstItem'), 500)
+          }
+
+          // Check for collector badges
+          setTimeout(() => {
+            const newTotalItems = totalItems + 1
+            if (newTotalItems >= 10) awardBadge('collector')
+            if (newTotalItems >= 50) awardBadge('hoarder')
+
+            // Check for specific item badges
+            const newInventory = { ...inventory, [randomItem.key]: inventory[randomItem.key] + 1 }
+            if (newInventory.gems >= 5) awardBadge('gemFinder')
+            if (newInventory.fish >= 5) awardBadge('fisherman')
+          }, 500)
 
           setTimeout(() => {
             setShowItemCollected(false)
@@ -549,6 +702,14 @@ export default function MemoryGame() {
 
           setStarsEarned(prev => [...prev, { level: currentLevel, stars: starsEarned }])
 
+          // Award badges for level completion and performance
+          if (gameMode === 'single') {
+            if (currentLevel >= 5) awardBadge('level5')
+            if (currentLevel >= 10) awardBadge('level10')
+            if (starsEarned === 3) awardBadge('perfectLevel')
+            if (movesUsed < 10) awardBadge('speedster')
+          }
+
           // Update highest level completed for unlocks (only in single player)
           if (gameMode === 'single' && currentLevel > highestLevelCompleted) {
             const oldLevel = highestLevelCompleted
@@ -563,6 +724,7 @@ export default function MemoryGame() {
               const theme = THEMES[themeKey]
               if (theme.unlockLevel <= newLevel && theme.unlockLevel > oldLevel) {
                 newUnlocksList.push({ type: 'theme', key: themeKey, name: theme.name })
+                awardBadge('unlockTheme')
               }
             })
 
@@ -603,6 +765,8 @@ export default function MemoryGame() {
 
                 if (winners.length === 1) {
                   setGameWinner(winners[0].player)
+                  // Award multiplayer win badge to winner
+                  awardBadge('multiplayerWin')
                 } else {
                   setGameWinner('tie')
                 }
@@ -1404,6 +1568,18 @@ export default function MemoryGame() {
         </div>
       )}
 
+      {/* Badge Earned Popup */}
+      {showBadgeEarned && earnedBadge && (
+        <div className="fixed top-20 left-1/2 transform -translate-x-1/2 z-[9999] pointer-events-none">
+          <div className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-3xl p-6 shadow-2xl animate-bounce border-4 border-yellow-400">
+            <p className="text-white text-2xl font-black mb-2">🏆 ACHIEVEMENT UNLOCKED! 🏆</p>
+            <div className="text-7xl mb-3">{earnedBadge.emoji}</div>
+            <p className="text-2xl font-bold text-white mb-1">{earnedBadge.name}</p>
+            <p className="text-lg text-yellow-200">{earnedBadge.description}</p>
+          </div>
+        </div>
+      )}
+
       {/* Inventory Modal */}
       {showInventory && (
         <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[9999]">
@@ -1445,6 +1621,60 @@ export default function MemoryGame() {
             <div className="mt-6 text-center">
               <p className="text-amber-800 text-sm">
                 💡 Collect rare items by matching cards perfectly!
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Badges Modal */}
+      {showBadges && (
+        <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[9999]">
+          <div className="bg-gradient-to-br from-purple-100 via-pink-100 to-blue-100 rounded-3xl p-8 max-w-2xl w-full mx-4 shadow-2xl border-4 border-purple-600">
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-4xl font-bold text-purple-900 flex items-center gap-2">
+                🏆 Achievements ({achievements.length}/{Object.keys(ALL_BADGES).length})
+              </h2>
+              <button
+                onClick={() => setShowBadges(false)}
+                className="bg-red-500 text-white font-bold py-2 px-4 rounded-xl hover:bg-red-600 transition-colors"
+              >
+                ✕ Close
+              </button>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4 max-h-96 overflow-y-auto">
+              {Object.values(ALL_BADGES).map(badge => {
+                const isEarned = achievements.includes(badge.id)
+                return (
+                  <div
+                    key={badge.id}
+                    className={`rounded-2xl p-4 text-center shadow-lg border-4 transition-all ${
+                      isEarned
+                        ? 'bg-gradient-to-br from-yellow-300 to-yellow-500 border-yellow-600 hover:scale-105'
+                        : 'bg-gray-300 border-gray-400 opacity-50'
+                    }`}
+                  >
+                    <div className={`text-5xl mb-2 ${!isEarned && 'grayscale'}`}>
+                      {badge.emoji}
+                    </div>
+                    <p className={`text-lg font-bold ${isEarned ? 'text-purple-900' : 'text-gray-600'}`}>
+                      {badge.name}
+                    </p>
+                    <p className={`text-sm ${isEarned ? 'text-purple-700' : 'text-gray-500'}`}>
+                      {badge.description}
+                    </p>
+                    {!isEarned && (
+                      <p className="text-xs text-gray-600 mt-1">🔒 Locked</p>
+                    )}
+                  </div>
+                )
+              })}
+            </div>
+
+            <div className="mt-6 text-center">
+              <p className="text-purple-800 text-sm">
+                Keep playing to unlock all achievements! 🎮
               </p>
             </div>
           </div>
@@ -1502,12 +1732,25 @@ export default function MemoryGame() {
           </button>
           <h1 className="text-xl font-bold text-white">Memory Game</h1>
           {gameMode === 'single' && (
-            <button
-              onClick={() => setShowInventory(true)}
-              className="bg-amber-600 text-white font-bold py-1 px-3 rounded text-sm hover:bg-amber-700 transition-colors shadow-lg"
-            >
-              🎒 Backpack
-            </button>
+            <div className="flex gap-1">
+              <button
+                onClick={() => setShowInventory(true)}
+                className="bg-amber-600 text-white font-bold py-1 px-2 rounded text-xs hover:bg-amber-700 transition-colors shadow-lg"
+              >
+                🎒
+              </button>
+              <button
+                onClick={() => setShowBadges(true)}
+                className="bg-purple-600 text-white font-bold py-1 px-2 rounded text-xs hover:bg-purple-700 transition-colors shadow-lg relative"
+              >
+                🏆
+                {achievements.length > 0 && (
+                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
+                    {achievements.length}
+                  </span>
+                )}
+              </button>
+            </div>
           )}
           {gameMode !== 'single' && <div className="w-16"></div>}
         </div>
