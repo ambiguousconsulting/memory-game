@@ -140,7 +140,32 @@ const TRANSLATIONS = {
     achievements: 'Achievements',
     unlocked: 'Unlocked!',
     itemCollected: 'Item Collected!',
-    badgeEarned: 'Badge Earned!'
+    badgeEarned: 'Badge Earned!',
+    backToGame: 'Back to Game',
+    howOldAreYou: 'How old are you?',
+    chooseYourTheme: 'Choose Your Theme!',
+    pickCardColor: 'Pick Your Card Color',
+    cardStyle: 'Card Style!',
+    normal: 'Normal',
+    sparkly: 'Sparkly!',
+    multiplayerGame: 'Multiplayer Game',
+    firstTo10Wins: 'First to 10 Points Wins!',
+    eachRoundHas: 'Each round has 4 cards (2 pairs)',
+    howManyPlayers: 'How many players? (2-8 players)',
+    players: 'players',
+    startGame: 'Start Game',
+    player: 'Player',
+    turn: 'Turn',
+    wins: 'Wins!',
+    score: 'Score',
+    level: 'Level',
+    newUnlocks: 'NEW UNLOCKS!',
+    tapMoreTimes: 'Tap',
+    moreTimes: 'more time',
+    opening: 'Opening...',
+    availableFromStart: 'Available from start',
+    completeLevel: 'Complete Level',
+    toUnlock: 'to unlock!'
   },
   es: {
     selectLanguage: 'Selecciona tu idioma',
@@ -173,7 +198,32 @@ const TRANSLATIONS = {
     achievements: 'Logros',
     unlocked: '¡Desbloqueado!',
     itemCollected: '¡Artículo Coleccionado!',
-    badgeEarned: '¡Insignia Ganada!'
+    badgeEarned: '¡Insignia Ganada!',
+    backToGame: 'Volver al Juego',
+    howOldAreYou: '¿Cuántos años tienes?',
+    chooseYourTheme: '¡Elige Tu Tema!',
+    pickCardColor: 'Elige el Color de Tus Cartas',
+    cardStyle: '¡Estilo de Carta!',
+    normal: 'Normal',
+    sparkly: '¡Brillante!',
+    multiplayerGame: 'Juego Multijugador',
+    firstTo10Wins: '¡El Primero en 10 Puntos Gana!',
+    eachRoundHas: 'Cada ronda tiene 4 cartas (2 pares)',
+    howManyPlayers: '¿Cuántos jugadores? (2-8 jugadores)',
+    players: 'jugadores',
+    startGame: 'Iniciar Juego',
+    player: 'Jugador',
+    turn: 'Turno',
+    wins: '¡Gana!',
+    score: 'Puntuación',
+    level: 'Nivel',
+    newUnlocks: '¡NUEVOS DESBLOQUEOS!',
+    tapMoreTimes: 'Toca',
+    moreTimes: 'vez más',
+    opening: 'Abriendo...',
+    availableFromStart: 'Disponible desde el inicio',
+    completeLevel: 'Completa el Nivel',
+    toUnlock: 'para desbloquear!'
   },
   fr: {
     selectLanguage: 'Sélectionnez votre langue',
@@ -206,7 +256,32 @@ const TRANSLATIONS = {
     achievements: 'Succès',
     unlocked: 'Débloqué!',
     itemCollected: 'Objet Collecté!',
-    badgeEarned: 'Badge Gagné!'
+    badgeEarned: 'Badge Gagné!',
+    backToGame: 'Retour au Jeu',
+    howOldAreYou: 'Quel âge avez-vous?',
+    chooseYourTheme: 'Choisissez Votre Thème!',
+    pickCardColor: 'Choisissez la Couleur de Vos Cartes',
+    cardStyle: 'Style de Carte!',
+    normal: 'Normal',
+    sparkly: 'Scintillant!',
+    multiplayerGame: 'Jeu Multijoueur',
+    firstTo10Wins: 'Le Premier à 10 Points Gagne!',
+    eachRoundHas: 'Chaque tour a 4 cartes (2 paires)',
+    howManyPlayers: 'Combien de joueurs? (2-8 joueurs)',
+    players: 'joueurs',
+    startGame: 'Commencer le Jeu',
+    player: 'Joueur',
+    turn: 'Tour',
+    wins: 'Gagne!',
+    score: 'Score',
+    level: 'Niveau',
+    newUnlocks: 'NOUVEAUX DÉBLOCAGES!',
+    tapMoreTimes: 'Appuyez',
+    moreTimes: 'fois de plus',
+    opening: 'Ouverture...',
+    availableFromStart: 'Disponible dès le début',
+    completeLevel: 'Terminez le Niveau',
+    toUnlock: 'pour débloquer!'
   },
   de: {
     selectLanguage: 'Wähle deine Sprache',
@@ -239,7 +314,32 @@ const TRANSLATIONS = {
     achievements: 'Erfolge',
     unlocked: 'Freigeschaltet!',
     itemCollected: 'Gegenstand Gesammelt!',
-    badgeEarned: 'Abzeichen Verdient!'
+    badgeEarned: 'Abzeichen Verdient!',
+    backToGame: 'Zurück zum Spiel',
+    howOldAreYou: 'Wie alt bist du?',
+    chooseYourTheme: 'Wähle Dein Thema!',
+    pickCardColor: 'Wähle Deine Kartenfarbe',
+    cardStyle: 'Kartenstil!',
+    normal: 'Normal',
+    sparkly: 'Glitzernd!',
+    multiplayerGame: 'Mehrspielerspiel',
+    firstTo10Wins: 'Erster mit 10 Punkten gewinnt!',
+    eachRoundHas: 'Jede Runde hat 4 Karten (2 Paare)',
+    howManyPlayers: 'Wie viele Spieler? (2-8 Spieler)',
+    players: 'Spieler',
+    startGame: 'Spiel Starten',
+    player: 'Spieler',
+    turn: 'Zug',
+    wins: 'Gewinnt!',
+    score: 'Punktzahl',
+    level: 'Level',
+    newUnlocks: 'NEUE FREISCHALTUNGEN!',
+    tapMoreTimes: 'Tippe',
+    moreTimes: 'mal mehr',
+    opening: 'Wird geöffnet...',
+    availableFromStart: 'Von Anfang an verfügbar',
+    completeLevel: 'Schließe Level ab',
+    toUnlock: 'zum Freischalten!'
   },
   it: {
     selectLanguage: 'Seleziona la tua lingua',
@@ -272,7 +372,32 @@ const TRANSLATIONS = {
     achievements: 'Risultati',
     unlocked: 'Sbloccato!',
     itemCollected: 'Oggetto Raccolto!',
-    badgeEarned: 'Distintivo Guadagnato!'
+    badgeEarned: 'Distintivo Guadagnato!',
+    backToGame: 'Torna al Gioco',
+    howOldAreYou: 'Quanti anni hai?',
+    chooseYourTheme: 'Scegli il Tuo Tema!',
+    pickCardColor: 'Scegli il Colore delle Carte',
+    cardStyle: 'Stile della Carta!',
+    normal: 'Normale',
+    sparkly: 'Scintillante!',
+    multiplayerGame: 'Gioco Multigiocatore',
+    firstTo10Wins: 'Il Primo a 10 Punti Vince!',
+    eachRoundHas: 'Ogni turno ha 4 carte (2 coppie)',
+    howManyPlayers: 'Quanti giocatori? (2-8 giocatori)',
+    players: 'giocatori',
+    startGame: 'Inizia il Gioco',
+    player: 'Giocatore',
+    turn: 'Turno',
+    wins: 'Vince!',
+    score: 'Punteggio',
+    level: 'Livello',
+    newUnlocks: 'NUOVI SBLOCCHI!',
+    tapMoreTimes: 'Tocca',
+    moreTimes: 'volta in più',
+    opening: 'Apertura...',
+    availableFromStart: 'Disponibile dall\'inizio',
+    completeLevel: 'Completa il Livello',
+    toUnlock: 'per sbloccare!'
   },
   pt: {
     selectLanguage: 'Selecione seu idioma',
@@ -305,7 +430,32 @@ const TRANSLATIONS = {
     achievements: 'Conquistas',
     unlocked: 'Desbloqueado!',
     itemCollected: 'Item Coletado!',
-    badgeEarned: 'Emblema Ganho!'
+    badgeEarned: 'Emblema Ganho!',
+    backToGame: 'Voltar ao Jogo',
+    howOldAreYou: 'Quantos anos você tem?',
+    chooseYourTheme: 'Escolha Seu Tema!',
+    pickCardColor: 'Escolha a Cor das Cartas',
+    cardStyle: 'Estilo da Carta!',
+    normal: 'Normal',
+    sparkly: 'Brilhante!',
+    multiplayerGame: 'Jogo Multijogador',
+    firstTo10Wins: 'Primeiro a 10 Pontos Vence!',
+    eachRoundHas: 'Cada rodada tem 4 cartas (2 pares)',
+    howManyPlayers: 'Quantos jogadores? (2-8 jogadores)',
+    players: 'jogadores',
+    startGame: 'Iniciar Jogo',
+    player: 'Jogador',
+    turn: 'Vez',
+    wins: 'Vence!',
+    score: 'Pontuação',
+    level: 'Nível',
+    newUnlocks: 'NOVOS DESBLOQUEIOS!',
+    tapMoreTimes: 'Toque',
+    moreTimes: 'vez mais',
+    opening: 'Abrindo...',
+    availableFromStart: 'Disponível desde o início',
+    completeLevel: 'Complete o Nível',
+    toUnlock: 'para desbloquear!'
   },
   ja: {
     selectLanguage: '言語を選択',
@@ -338,7 +488,32 @@ const TRANSLATIONS = {
     achievements: '実績',
     unlocked: 'ロック解除！',
     itemCollected: 'アイテム収集！',
-    badgeEarned: 'バッジ獲得！'
+    badgeEarned: 'バッジ獲得！',
+    backToGame: 'ゲームに戻る',
+    howOldAreYou: '何歳ですか？',
+    chooseYourTheme: 'テーマを選ぼう！',
+    pickCardColor: 'カードの色を選ぼう',
+    cardStyle: 'カードスタイル！',
+    normal: 'ノーマル',
+    sparkly: 'キラキラ！',
+    multiplayerGame: 'マルチプレイヤーゲーム',
+    firstTo10Wins: '先に10ポイント取った人が勝ち！',
+    eachRoundHas: '各ラウンドは4枚のカード（2ペア）',
+    howManyPlayers: '何人でプレイする？（2〜8人）',
+    players: '人',
+    startGame: 'ゲーム開始',
+    player: 'プレイヤー',
+    turn: 'ターン',
+    wins: '勝ち！',
+    score: 'スコア',
+    level: 'レベル',
+    newUnlocks: '新しいアイテム解除！',
+    tapMoreTimes: 'タップ',
+    moreTimes: '回もっと',
+    opening: '開いています...',
+    availableFromStart: '最初から利用可能',
+    completeLevel: 'レベルをクリア',
+    toUnlock: 'で解除！'
   },
   ko: {
     selectLanguage: '언어 선택',
@@ -371,7 +546,32 @@ const TRANSLATIONS = {
     achievements: '업적',
     unlocked: '잠금 해제!',
     itemCollected: '아이템 수집!',
-    badgeEarned: '배지 획득!'
+    badgeEarned: '배지 획득!',
+    backToGame: '게임으로 돌아가기',
+    howOldAreYou: '나이가 몇 살이에요?',
+    chooseYourTheme: '테마를 선택하세요!',
+    pickCardColor: '카드 색상을 선택하세요',
+    cardStyle: '카드 스타일!',
+    normal: '일반',
+    sparkly: '반짝반짝!',
+    multiplayerGame: '멀티플레이어 게임',
+    firstTo10Wins: '먼저 10점을 얻는 사람이 승리!',
+    eachRoundHas: '각 라운드는 4장의 카드 (2쌍)',
+    howManyPlayers: '플레이어 수는? (2-8명)',
+    players: '명',
+    startGame: '게임 시작',
+    player: '플레이어',
+    turn: '턴',
+    wins: '승리!',
+    score: '점수',
+    level: '레벨',
+    newUnlocks: '새로운 잠금 해제!',
+    tapMoreTimes: '탭',
+    moreTimes: '번 더',
+    opening: '열고 있어요...',
+    availableFromStart: '처음부터 사용 가능',
+    completeLevel: '레벨 완료',
+    toUnlock: '잠금 해제하려면!'
   },
   zh: {
     selectLanguage: '选择语言',
@@ -404,7 +604,32 @@ const TRANSLATIONS = {
     achievements: '成就',
     unlocked: '已解锁！',
     itemCollected: '物品已收集！',
-    badgeEarned: '徽章已获得！'
+    badgeEarned: '徽章已获得！',
+    backToGame: '返回游戏',
+    howOldAreYou: '你几岁了？',
+    chooseYourTheme: '选择你的主题！',
+    pickCardColor: '选择你的卡片颜色',
+    cardStyle: '卡片样式！',
+    normal: '普通',
+    sparkly: '闪亮！',
+    multiplayerGame: '多人游戏',
+    firstTo10Wins: '先到10分者获胜！',
+    eachRoundHas: '每轮有4张卡片（2对）',
+    howManyPlayers: '几个玩家？（2-8名玩家）',
+    players: '名玩家',
+    startGame: '开始游戏',
+    player: '玩家',
+    turn: '回合',
+    wins: '获胜！',
+    score: '得分',
+    level: '关卡',
+    newUnlocks: '新解锁！',
+    tapMoreTimes: '点击',
+    moreTimes: '次',
+    opening: '正在打开...',
+    availableFromStart: '从开始就可用',
+    completeLevel: '完成关卡',
+    toUnlock: '来解锁！'
   }
 }
 
@@ -1538,7 +1763,7 @@ export default function MemoryGame() {
               onClick={() => setShowSettings(false)}
               className="bg-white text-purple-600 font-bold py-2 px-4 rounded-lg text-sm hover:bg-gray-100 transition-colors"
             >
-              ← Back to Game
+              ← {t('backToGame')}
             </button>
             <h1 className="text-3xl font-bold text-white">⚙️ {t('settings')}</h1>
             <div className="w-20"></div>
@@ -1546,7 +1771,7 @@ export default function MemoryGame() {
 
           {/* Age Selection */}
           <div className="text-center bg-white bg-opacity-20 rounded-2xl p-6 backdrop-blur-sm">
-            <h2 className="text-black text-lg font-bold mb-2">🎂 How old are you?</h2>
+            <h2 className="text-black text-lg font-bold mb-2">🎂 {t('howOldAreYou')}</h2>
             <div className="flex justify-center gap-3">
               {[
                 { key: '3-5', label: '3-5 years', emoji: '👧🏽🍭👦🏽', desc: 'Easy & Fun!' },
@@ -1599,7 +1824,7 @@ export default function MemoryGame() {
 
           {/* Theme Selection */}
           <div className="text-center bg-white bg-opacity-20 rounded-2xl p-6 backdrop-blur-sm">
-            <h2 className="text-black text-lg font-bold mb-2">🎨 Choose Your Theme!</h2>
+            <h2 className="text-black text-lg font-bold mb-2">🎨 {t('chooseYourTheme')}</h2>
             <div className="flex justify-center gap-3 flex-wrap">
               {Object.keys(THEMES).map((themeKey) => {
                 const theme = THEMES[themeKey]
@@ -1770,19 +1995,19 @@ export default function MemoryGame() {
 
           {/* Multiplayer settings */}
           <div className="text-center bg-white bg-opacity-20 rounded-2xl p-6 backdrop-blur-sm max-w-lg mx-auto">
-            <h3 className="text-white text-2xl font-bold mb-4">👥 Multiplayer Game</h3>
+            <h3 className="text-white text-2xl font-bold mb-4">👥 {t('multiplayerGame')}</h3>
             {!playerAge && (
               <div className="mb-4 p-4 bg-yellow-200 bg-opacity-80 rounded-lg">
-                <p className="text-purple-800 font-bold">⚠️ Please pick your age first above!</p>
+                <p className="text-purple-800 font-bold">⚠️ {t('howOldAreYou')}</p>
               </div>
             )}
             {playerAge && (
               <>
-                <p className="text-black text-lg mb-4">🏆 First to 10 Points Wins!</p>
-                <p className="text-yellow-200 text-sm mb-4">Each round has 4 cards (2 pairs)</p>
-                
+                <p className="text-black text-lg mb-4">🏆 {t('firstTo10Wins')}</p>
+                <p className="text-yellow-200 text-sm mb-4">{t('eachRoundHas')}</p>
+
                 <div className="mb-4">
-                  <p className="text-white text-lg font-bold mb-3">How many players? (2-8 players)</p>
+                  <p className="text-white text-lg font-bold mb-3">{t('howManyPlayers')}</p>
                   <div className="flex justify-center gap-2 mb-4 flex-wrap">
                     {[2, 3, 4, 5, 6, 7, 8].map(num => (
                       <button
@@ -1959,7 +2184,7 @@ export default function MemoryGame() {
           <div className={`text-center ${giftBounces < 3 ? 'animate-bounce' : ''}`}>
             <div className="text-9xl mb-4">🎁</div>
             <p className="text-white text-2xl font-bold">
-              {giftBounces < 3 ? `Tap ${3 - giftBounces} more time${3 - giftBounces > 1 ? 's' : ''}!` : 'Opening...'}
+              {giftBounces < 3 ? `${t('tapMoreTimes')} ${3 - giftBounces} ${t('moreTimes')}${3 - giftBounces > 1 ? 's' : ''}!` : t('opening')}
             </p>
           </div>
         </div>
@@ -1969,7 +2194,7 @@ export default function MemoryGame() {
       {showGiftBox && giftOpened && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999]">
           <div className="bg-white rounded-3xl p-8 max-w-md text-center shadow-2xl">
-            <h2 className="text-4xl font-bold text-purple-800 mb-4">🎉 NEW UNLOCKS! 🎉</h2>
+            <h2 className="text-4xl font-bold text-purple-800 mb-4">🎉 {t('newUnlocks')} 🎉</h2>
             <div className="space-y-3">
               {newUnlocks.map((unlock, index) => (
                 <div
