@@ -96,10 +96,322 @@ const LEVELS = {
   ]
 }
 
+const LANGUAGES = {
+  en: { flag: '🇺🇸', name: 'English' },
+  es: { flag: '🇪🇸', name: 'Español' },
+  fr: { flag: '🇫🇷', name: 'Français' },
+  de: { flag: '🇩🇪', name: 'Deutsch' },
+  it: { flag: '🇮🇹', name: 'Italiano' },
+  pt: { flag: '🇧🇷', name: 'Português (BR)' },
+  ja: { flag: '🇯🇵', name: '日本語' },
+  ko: { flag: '🇰🇷', name: '한국어' },
+  zh: { flag: '🇨🇳', name: '中文' }
+}
+
+const TRANSLATIONS = {
+  en: {
+    selectLanguage: 'Select Your Language',
+    settings: 'Settings',
+    resetToLevel1: 'Reset to Level 1',
+    resetAllProgress: 'Reset All Progress',
+    ageGroup: 'Age Group',
+    themeColor: 'Theme & Color',
+    sparklyCards: 'Sparkly Cards',
+    on: 'ON',
+    off: 'OFF',
+    close: 'Close',
+    backToMenu: 'Back to Menu',
+    moves: 'Moves',
+    hint: 'Hint',
+    youWin: 'YOU WIN!',
+    gameOver: 'GAME OVER!',
+    tryAgain: 'Try Again',
+    nextLevel: 'Next Level',
+    resetEverything: 'Reset Everything?',
+    thisWillDelete: 'This will delete:',
+    allLevels: 'All your levels',
+    allThemes: 'All unlocked themes',
+    allAchievements: 'All achievements',
+    allItems: 'All collected items',
+    reallyReset: 'Are you really sure?',
+    yesReset: 'Yes, Reset Everything',
+    keepProgress: 'Keep My Progress!',
+    backpack: 'Backpack',
+    achievements: 'Achievements',
+    unlocked: 'Unlocked!',
+    itemCollected: 'Item Collected!',
+    badgeEarned: 'Badge Earned!'
+  },
+  es: {
+    selectLanguage: 'Selecciona tu idioma',
+    settings: 'Configuración',
+    resetToLevel1: 'Reiniciar al Nivel 1',
+    resetAllProgress: 'Reiniciar Todo el Progreso',
+    ageGroup: 'Grupo de Edad',
+    themeColor: 'Tema y Color',
+    sparklyCards: 'Cartas Brillantes',
+    on: 'SÍ',
+    off: 'NO',
+    close: 'Cerrar',
+    backToMenu: 'Volver al Menú',
+    moves: 'Movimientos',
+    hint: 'Pista',
+    youWin: '¡GANASTE!',
+    gameOver: '¡JUEGO TERMINADO!',
+    tryAgain: 'Intentar de Nuevo',
+    nextLevel: 'Siguiente Nivel',
+    resetEverything: '¿Reiniciar Todo?',
+    thisWillDelete: 'Esto borrará:',
+    allLevels: 'Todos tus niveles',
+    allThemes: 'Todos los temas desbloqueados',
+    allAchievements: 'Todos los logros',
+    allItems: 'Todos los artículos coleccionados',
+    reallyReset: '¿Estás realmente seguro?',
+    yesReset: 'Sí, Reiniciar Todo',
+    keepProgress: '¡Mantener Mi Progreso!',
+    backpack: 'Mochila',
+    achievements: 'Logros',
+    unlocked: '¡Desbloqueado!',
+    itemCollected: '¡Artículo Coleccionado!',
+    badgeEarned: '¡Insignia Ganada!'
+  },
+  fr: {
+    selectLanguage: 'Sélectionnez votre langue',
+    settings: 'Paramètres',
+    resetToLevel1: 'Recommencer au Niveau 1',
+    resetAllProgress: 'Réinitialiser Tout',
+    ageGroup: 'Groupe d\'âge',
+    themeColor: 'Thème et Couleur',
+    sparklyCards: 'Cartes Scintillantes',
+    on: 'OUI',
+    off: 'NON',
+    close: 'Fermer',
+    backToMenu: 'Retour au Menu',
+    moves: 'Coups',
+    hint: 'Indice',
+    youWin: 'VICTOIRE!',
+    gameOver: 'JEU TERMINÉ!',
+    tryAgain: 'Réessayer',
+    nextLevel: 'Niveau Suivant',
+    resetEverything: 'Tout Réinitialiser?',
+    thisWillDelete: 'Cela supprimera:',
+    allLevels: 'Tous vos niveaux',
+    allThemes: 'Tous les thèmes débloqués',
+    allAchievements: 'Tous les succès',
+    allItems: 'Tous les objets collectés',
+    reallyReset: 'Êtes-vous vraiment sûr?',
+    yesReset: 'Oui, Tout Réinitialiser',
+    keepProgress: 'Garder Ma Progression!',
+    backpack: 'Sac à dos',
+    achievements: 'Succès',
+    unlocked: 'Débloqué!',
+    itemCollected: 'Objet Collecté!',
+    badgeEarned: 'Badge Gagné!'
+  },
+  de: {
+    selectLanguage: 'Wähle deine Sprache',
+    settings: 'Einstellungen',
+    resetToLevel1: 'Zurück zu Level 1',
+    resetAllProgress: 'Alles Zurücksetzen',
+    ageGroup: 'Altersgruppe',
+    themeColor: 'Thema & Farbe',
+    sparklyCards: 'Glitzerkarten',
+    on: 'AN',
+    off: 'AUS',
+    close: 'Schließen',
+    backToMenu: 'Zurück zum Menü',
+    moves: 'Züge',
+    hint: 'Hinweis',
+    youWin: 'GEWONNEN!',
+    gameOver: 'SPIEL VORBEI!',
+    tryAgain: 'Nochmal Versuchen',
+    nextLevel: 'Nächstes Level',
+    resetEverything: 'Alles Zurücksetzen?',
+    thisWillDelete: 'Dies wird löschen:',
+    allLevels: 'Alle deine Level',
+    allThemes: 'Alle freigeschalteten Themen',
+    allAchievements: 'Alle Erfolge',
+    allItems: 'Alle gesammelten Gegenstände',
+    reallyReset: 'Bist du wirklich sicher?',
+    yesReset: 'Ja, Alles Zurücksetzen',
+    keepProgress: 'Fortschritt Behalten!',
+    backpack: 'Rucksack',
+    achievements: 'Erfolge',
+    unlocked: 'Freigeschaltet!',
+    itemCollected: 'Gegenstand Gesammelt!',
+    badgeEarned: 'Abzeichen Verdient!'
+  },
+  it: {
+    selectLanguage: 'Seleziona la tua lingua',
+    settings: 'Impostazioni',
+    resetToLevel1: 'Torna al Livello 1',
+    resetAllProgress: 'Resetta Tutto',
+    ageGroup: 'Fascia d\'età',
+    themeColor: 'Tema e Colore',
+    sparklyCards: 'Carte Scintillanti',
+    on: 'SÌ',
+    off: 'NO',
+    close: 'Chiudi',
+    backToMenu: 'Torna al Menu',
+    moves: 'Mosse',
+    hint: 'Suggerimento',
+    youWin: 'HAI VINTO!',
+    gameOver: 'GIOCO FINITO!',
+    tryAgain: 'Riprova',
+    nextLevel: 'Livello Successivo',
+    resetEverything: 'Resettare Tutto?',
+    thisWillDelete: 'Questo cancellerà:',
+    allLevels: 'Tutti i tuoi livelli',
+    allThemes: 'Tutti i temi sbloccati',
+    allAchievements: 'Tutti i risultati',
+    allItems: 'Tutti gli oggetti raccolti',
+    reallyReset: 'Sei davvero sicuro?',
+    yesReset: 'Sì, Resetta Tutto',
+    keepProgress: 'Mantieni il Mio Progresso!',
+    backpack: 'Zaino',
+    achievements: 'Risultati',
+    unlocked: 'Sbloccato!',
+    itemCollected: 'Oggetto Raccolto!',
+    badgeEarned: 'Distintivo Guadagnato!'
+  },
+  pt: {
+    selectLanguage: 'Selecione seu idioma',
+    settings: 'Configurações',
+    resetToLevel1: 'Voltar ao Nível 1',
+    resetAllProgress: 'Resetar Tudo',
+    ageGroup: 'Faixa Etária',
+    themeColor: 'Tema e Cor',
+    sparklyCards: 'Cartas Brilhantes',
+    on: 'SIM',
+    off: 'NÃO',
+    close: 'Fechar',
+    backToMenu: 'Voltar ao Menu',
+    moves: 'Movimentos',
+    hint: 'Dica',
+    youWin: 'VOCÊ VENCEU!',
+    gameOver: 'FIM DE JOGO!',
+    tryAgain: 'Tentar Novamente',
+    nextLevel: 'Próximo Nível',
+    resetEverything: 'Resetar Tudo?',
+    thisWillDelete: 'Isso vai deletar:',
+    allLevels: 'Todos os seus níveis',
+    allThemes: 'Todos os temas desbloqueados',
+    allAchievements: 'Todas as conquistas',
+    allItems: 'Todos os itens coletados',
+    reallyReset: 'Você tem certeza?',
+    yesReset: 'Sim, Resetar Tudo',
+    keepProgress: 'Manter Meu Progresso!',
+    backpack: 'Mochila',
+    achievements: 'Conquistas',
+    unlocked: 'Desbloqueado!',
+    itemCollected: 'Item Coletado!',
+    badgeEarned: 'Emblema Ganho!'
+  },
+  ja: {
+    selectLanguage: '言語を選択',
+    settings: '設定',
+    resetToLevel1: 'レベル1に戻る',
+    resetAllProgress: 'すべてリセット',
+    ageGroup: '年齢層',
+    themeColor: 'テーマと色',
+    sparklyCards: 'キラキラカード',
+    on: 'オン',
+    off: 'オフ',
+    close: '閉じる',
+    backToMenu: 'メニューに戻る',
+    moves: '移動',
+    hint: 'ヒント',
+    youWin: '勝利！',
+    gameOver: 'ゲームオーバー！',
+    tryAgain: 'もう一度',
+    nextLevel: '次のレベル',
+    resetEverything: 'すべてリセット？',
+    thisWillDelete: 'これは削除されます：',
+    allLevels: 'すべてのレベル',
+    allThemes: 'ロック解除されたテーマ',
+    allAchievements: 'すべての実績',
+    allItems: '収集したアイテム',
+    reallyReset: '本当によろしいですか？',
+    yesReset: 'はい、すべてリセット',
+    keepProgress: '進行状況を保持！',
+    backpack: 'バックパック',
+    achievements: '実績',
+    unlocked: 'ロック解除！',
+    itemCollected: 'アイテム収集！',
+    badgeEarned: 'バッジ獲得！'
+  },
+  ko: {
+    selectLanguage: '언어 선택',
+    settings: '설정',
+    resetToLevel1: '레벨 1로 돌아가기',
+    resetAllProgress: '모두 초기화',
+    ageGroup: '연령대',
+    themeColor: '테마 및 색상',
+    sparklyCards: '반짝이는 카드',
+    on: '켜기',
+    off: '끄기',
+    close: '닫기',
+    backToMenu: '메뉴로 돌아가기',
+    moves: '이동',
+    hint: '힌트',
+    youWin: '승리!',
+    gameOver: '게임 오버!',
+    tryAgain: '다시 시도',
+    nextLevel: '다음 레벨',
+    resetEverything: '모두 초기화?',
+    thisWillDelete: '삭제됩니다:',
+    allLevels: '모든 레벨',
+    allThemes: '잠금 해제된 테마',
+    allAchievements: '모든 업적',
+    allItems: '수집한 아이템',
+    reallyReset: '정말 확실합니까?',
+    yesReset: '예, 모두 초기화',
+    keepProgress: '진행 상황 유지!',
+    backpack: '배낭',
+    achievements: '업적',
+    unlocked: '잠금 해제!',
+    itemCollected: '아이템 수집!',
+    badgeEarned: '배지 획득!'
+  },
+  zh: {
+    selectLanguage: '选择语言',
+    settings: '设置',
+    resetToLevel1: '返回第1关',
+    resetAllProgress: '重置所有进度',
+    ageGroup: '年龄段',
+    themeColor: '主题和颜色',
+    sparklyCards: '闪亮卡片',
+    on: '开',
+    off: '关',
+    close: '关闭',
+    backToMenu: '返回菜单',
+    moves: '移动',
+    hint: '提示',
+    youWin: '你赢了！',
+    gameOver: '游戏结束！',
+    tryAgain: '再试一次',
+    nextLevel: '下一关',
+    resetEverything: '重置所有？',
+    thisWillDelete: '这将删除：',
+    allLevels: '所有关卡',
+    allThemes: '已解锁的主题',
+    allAchievements: '所有成就',
+    allItems: '收集的物品',
+    reallyReset: '你确定吗？',
+    yesReset: '是的，重置所有',
+    keepProgress: '保留我的进度！',
+    backpack: '背包',
+    achievements: '成就',
+    unlocked: '已解锁！',
+    itemCollected: '物品已收集！',
+    badgeEarned: '徽章已获得！'
+  }
+}
+
 const CARD_COLORS = {
-  default: { 
-    name: "⚪ Default White", 
-    unflipped: "from-gray-100 to-white", 
+  default: {
+    name: "⚪ Default White",
+    unflipped: "from-gray-100 to-white",
     flipped: "from-gray-50 to-gray-100",
     unlockLevel: 0,
     unlockDescription: "Available from start"
@@ -192,6 +504,8 @@ export default function MemoryGame() {
   const [hintCooldownTime, setHintCooldownTime] = useState(0) // Show countdown seconds
   const [showResetConfirm, setShowResetConfirm] = useState(false) // Show reset to level 1 confirmation
   const [showResetAllConfirm, setShowResetAllConfirm] = useState(false) // Show reset all progress confirmation
+  const [language, setLanguage] = useState('en') // Current language
+  const [showLanguageSelect, setShowLanguageSelect] = useState(false) // Show language selection screen
 
   // Inventory system
   const [inventory, setInventory] = useState({
@@ -331,6 +645,15 @@ export default function MemoryGame() {
         }
       }
 
+      // Load language preference or show language selection for first time
+      const savedLanguage = localStorage.getItem('memoryGame_language')
+      if (savedLanguage && LANGUAGES[savedLanguage]) {
+        setLanguage(savedLanguage)
+      } else {
+        // First time user - show language selection
+        setShowLanguageSelect(true)
+      }
+
       setIsLoaded(true)
     }
   }, [])
@@ -391,6 +714,13 @@ export default function MemoryGame() {
     }
   }, [achievements, isLoaded])
 
+  // Save language preference
+  useEffect(() => {
+    if (isLoaded && typeof window !== 'undefined') {
+      localStorage.setItem('memoryGame_language', language)
+    }
+  }, [language, isLoaded])
+
   // Safety check: reset to defaults if current selections are locked (only after loading)
   useEffect(() => {
     if (isLoaded) {
@@ -405,6 +735,11 @@ export default function MemoryGame() {
       }
     }
   }, [highestLevelCompleted, isLoaded])
+
+  // Helper function to get translated text
+  const t = (key) => {
+    return TRANSLATIONS[language]?.[key] || TRANSLATIONS['en'][key] || key
+  }
 
   // Function to play sounds using Web Audio API
   const playSound = (soundType, volume = 0.3) => {
@@ -1125,7 +1460,78 @@ export default function MemoryGame() {
   if (showSettings) {
     const selectedTheme = THEMES[currentTheme]
     return (
-      <div className={`min-h-screen bg-gradient-to-br ${selectedTheme.bg} p-2 overflow-y-auto`}>
+      <>
+        {/* Reset All Progress Confirmation Popup - must be here for settings screen */}
+        {showResetAllConfirm && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999]">
+            <div className="bg-gradient-to-br from-red-300 via-orange-300 to-yellow-300 rounded-3xl p-8 max-w-md text-center shadow-2xl border-4 border-red-600">
+              <div className="text-6xl mb-4">⚠️</div>
+              <h2 className="text-3xl font-bold text-red-800 mb-4">{t('resetEverything')}</h2>
+              <p className="text-xl text-red-700 mb-2">{t('thisWillDelete')}</p>
+              <p className="text-lg text-red-600 mb-6">
+                ⭐ {t('allLevels')}<br/>
+                🎨 {t('allThemes')}<br/>
+                🏆 {t('allAchievements')}<br/>
+                🎒 {t('allItems')}
+              </p>
+              <p className="text-lg font-bold text-red-800 mb-6">{t('reallyReset')} 🤔</p>
+              <div className="flex gap-4 justify-center">
+                <button
+                  onClick={() => {
+                    // Clear all saved data
+                    localStorage.removeItem('memoryGame_highestLevel')
+                    localStorage.removeItem('memoryGame_starsEarned')
+                    localStorage.removeItem('memoryGame_theme')
+                    localStorage.removeItem('memoryGame_cardColor')
+                    localStorage.removeItem('memoryGame_isSparkly')
+                    localStorage.removeItem('memoryGame_playerAge')
+                    localStorage.removeItem('memoryGame_inventory')
+                    localStorage.removeItem('memoryGame_achievements')
+
+                    // Reset all state
+                    setHighestLevelCompleted(0)
+                    setStarsEarned([])
+                    setCurrentTheme('starter')
+                    setCardColor('default')
+                    setIsSparkly(false)
+                    setPlayerAge('6-8')
+                    setCurrentLevel(1)
+                    setMovesUsed(0)
+                    setTotalMovesAvailable(4)
+                    setInventory({ apples: 0, berries: 0, fish: 0, gems: 0, treasures: 0, mystery: 0 })
+                    setAchievements([])
+                    setLastViewedBadgeCount(0)
+                    setIsWon(false)
+                    setIsGameOver(false)
+                    setMatchedCards([])
+                    setFlippedCards([])
+
+                    playSound('click', 0.2)
+                    setShowResetAllConfirm(false)
+                    setShowSettings(false)
+
+                    // Shuffle cards to refresh the game
+                    shuffleCards(1)
+                  }}
+                  className="bg-red-600 text-white font-bold py-3 px-8 rounded-xl text-lg hover:bg-red-700 transition-all transform hover:scale-105 shadow-lg"
+                >
+                  ✅ {t('yesReset')}
+                </button>
+                <button
+                  onClick={() => {
+                    setShowResetAllConfirm(false)
+                    playSound('click', 0.2)
+                  }}
+                  className="bg-green-500 text-white font-bold py-3 px-8 rounded-xl text-lg hover:bg-green-600 transition-all transform hover:scale-105 shadow-lg"
+                >
+                  ❌ {t('keepProgress')}
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        <div className={`min-h-screen bg-gradient-to-br ${selectedTheme.bg} p-2 overflow-y-auto`}>
         <div className="max-w-4xl mx-auto space-y-4">
           <div className="flex justify-between items-center mb-4">
             <button
@@ -1134,7 +1540,7 @@ export default function MemoryGame() {
             >
               ← Back to Game
             </button>
-            <h1 className="text-3xl font-bold text-white">⚙️ Settings</h1>
+            <h1 className="text-3xl font-bold text-white">⚙️ {t('settings')}</h1>
             <div className="w-20"></div>
           </div>
 
@@ -1162,6 +1568,30 @@ export default function MemoryGame() {
                   <div className="text-xl mb-1">{age.emoji}</div>
                   <div className="text-xs font-bold">{age.label}</div>
                   <div className="text-xs">{age.desc}</div>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Language Selection */}
+          <div className="text-center bg-white bg-opacity-20 rounded-2xl p-6 backdrop-blur-sm">
+            <h2 className="text-black text-lg font-bold mb-2">🌍 {t('selectLanguage')}</h2>
+            <div className="grid grid-cols-3 gap-3">
+              {Object.entries(LANGUAGES).map(([code, { flag, name }]) => (
+                <button
+                  key={code}
+                  onClick={() => {
+                    playSound('click', 0.2)
+                    setLanguage(code)
+                  }}
+                  className={`p-3 rounded-xl font-bold text-sm transition-all transform hover:scale-105 ${
+                    language === code
+                      ? 'bg-yellow-300 text-purple-800 ring-4 ring-white shadow-xl'
+                      : 'bg-white text-purple-600 shadow-lg'
+                  }`}
+                >
+                  <div className="text-3xl mb-1">{flag}</div>
+                  <div className="text-xs">{name}</div>
                 </button>
               ))}
             </div>
@@ -1301,7 +1731,7 @@ export default function MemoryGame() {
 
           {/* Sparkly Effect Toggle */}
           <div className="text-center bg-white bg-opacity-20 rounded-2xl p-6 backdrop-blur-sm">
-            <h2 className="text-black text-lg font-bold mb-2">✨ Card Style!</h2>
+            <h2 className="text-black text-lg font-bold mb-2">✨ {t('sparklyCards')}</h2>
             <div className="flex justify-center gap-4">
               <button
                 onClick={() => setIsSparkly(false)}
@@ -1312,7 +1742,7 @@ export default function MemoryGame() {
                 }`}
               >
                 <div className="text-xl mb-1">🟦</div>
-                <div className="text-xs">Normal</div>
+                <div className="text-xs">{t('off')}</div>
               </button>
               <button
                 onClick={() => {
@@ -1333,7 +1763,7 @@ export default function MemoryGame() {
                 }`}
               >
                 <div className="text-xl mb-1">{getDisplayUnlockStatus(4) ? '✨' : '🔒'}</div>
-                <div className="text-xs">{getDisplayUnlockStatus(4) ? 'Sparkly!' : 'Level 4'}</div>
+                <div className="text-xs">{getDisplayUnlockStatus(4) ? t('on') : 'Level 4'}</div>
               </button>
             </div>
           </div>
@@ -1455,17 +1885,19 @@ export default function MemoryGame() {
             </div>
 
             {/* Reset Progress Button */}
-            {highestLevelCompleted > 0 && (
-              <button
-                onClick={() => setShowResetAllConfirm(true)}
-                className="bg-red-500 text-white font-bold py-2 px-4 rounded-lg text-sm hover:bg-red-600 transition-colors"
-              >
-                🔄 Reset All Progress
-              </button>
-            )}
+            <button
+              onClick={() => {
+                console.log('Reset button clicked!')
+                setShowResetAllConfirm(true)
+              }}
+              className="bg-red-500 text-white font-bold py-2 px-4 rounded-lg text-sm hover:bg-red-600 transition-colors"
+            >
+              🔄 Reset All Progress
+            </button>
           </div>
         </div>
       </div>
+      </>
     )
   }
 
@@ -1475,7 +1907,35 @@ export default function MemoryGame() {
   
   return (
     <div className={`h-screen bg-gradient-to-br ${selectedTheme.bg} p-2 flex flex-col overflow-hidden relative`}>
-      
+
+      {/* Language Selection Screen - First Time Only */}
+      {showLanguageSelect && (
+        <div className="fixed inset-0 bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 flex items-center justify-center z-[10000]">
+          <div className="bg-white rounded-3xl p-8 max-w-2xl w-full mx-4 text-center shadow-2xl">
+            <div className="text-6xl mb-6">🌍</div>
+            <h2 className="text-4xl font-bold text-purple-800 mb-8">
+              {language === 'en' ? 'Select Your Language' : TRANSLATIONS[language]?.selectLanguage || 'Select Your Language'}
+            </h2>
+            <div className="grid grid-cols-3 gap-4">
+              {Object.entries(LANGUAGES).map(([code, { flag, name }]) => (
+                <button
+                  key={code}
+                  onClick={() => {
+                    setLanguage(code)
+                    setShowLanguageSelect(false)
+                    playSound('click', 0.3)
+                  }}
+                  className="bg-gradient-to-br from-blue-400 to-purple-500 hover:from-blue-500 hover:to-purple-600 text-white font-bold py-6 px-4 rounded-2xl text-2xl transition-all transform hover:scale-105 shadow-lg"
+                >
+                  <div className="text-4xl mb-2">{flag}</div>
+                  <div className="text-lg">{name}</div>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Gift Box Unlock Animation */}
       {showGiftBox && !giftOpened && (
         <div
@@ -1694,76 +2154,6 @@ export default function MemoryGame() {
                 className="bg-red-500 text-white font-bold py-3 px-8 rounded-xl text-lg hover:bg-red-600 transition-all transform hover:scale-105 shadow-lg"
               >
                 ❌ Never Mind
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Reset All Progress Confirmation Popup */}
-      {showResetAllConfirm && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999]">
-          <div className="bg-gradient-to-br from-red-300 via-orange-300 to-yellow-300 rounded-3xl p-8 max-w-md text-center shadow-2xl border-4 border-red-600">
-            <div className="text-6xl mb-4">⚠️</div>
-            <h2 className="text-3xl font-bold text-red-800 mb-4">Reset Everything?</h2>
-            <p className="text-xl text-red-700 mb-2">This will delete:</p>
-            <p className="text-lg text-red-600 mb-6">
-              ⭐ All your levels<br/>
-              🎨 All unlocked themes<br/>
-              🏆 All achievements<br/>
-              🎒 All collected items
-            </p>
-            <p className="text-lg font-bold text-red-800 mb-6">Are you really sure? 🤔</p>
-            <div className="flex gap-4 justify-center">
-              <button
-                onClick={() => {
-                  // Clear all saved data
-                  localStorage.removeItem('memoryGame_highestLevel')
-                  localStorage.removeItem('memoryGame_starsEarned')
-                  localStorage.removeItem('memoryGame_theme')
-                  localStorage.removeItem('memoryGame_cardColor')
-                  localStorage.removeItem('memoryGame_isSparkly')
-                  localStorage.removeItem('memoryGame_playerAge')
-                  localStorage.removeItem('memoryGame_inventory')
-                  localStorage.removeItem('memoryGame_achievements')
-
-                  // Reset all state
-                  setHighestLevelCompleted(0)
-                  setStarsEarned([])
-                  setCurrentTheme('starter')
-                  setCardColor('default')
-                  setIsSparkly(false)
-                  setPlayerAge('6-8')
-                  setCurrentLevel(1)
-                  setMovesUsed(0)
-                  setTotalMovesAvailable(4)
-                  setInventory({ apples: 0, berries: 0, fish: 0, gems: 0, treasures: 0, mystery: 0 })
-                  setAchievements([])
-                  setLastViewedBadgeCount(0)
-                  setIsWon(false)
-                  setIsGameOver(false)
-                  setMatchedCards([])
-                  setFlippedCards([])
-
-                  playSound('click', 0.2)
-                  setShowResetAllConfirm(false)
-                  setShowSettings(false)
-
-                  // Shuffle cards to refresh the game
-                  shuffleCards(1)
-                }}
-                className="bg-red-600 text-white font-bold py-3 px-8 rounded-xl text-lg hover:bg-red-700 transition-all transform hover:scale-105 shadow-lg"
-              >
-                ✅ Yes, Reset Everything
-              </button>
-              <button
-                onClick={() => {
-                  setShowResetAllConfirm(false)
-                  playSound('click', 0.2)
-                }}
-                className="bg-green-500 text-white font-bold py-3 px-8 rounded-xl text-lg hover:bg-green-600 transition-all transform hover:scale-105 shadow-lg"
-              >
-                ❌ Keep My Progress!
               </button>
             </div>
           </div>
