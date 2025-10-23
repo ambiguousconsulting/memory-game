@@ -125,6 +125,7 @@ const TRANSLATIONS = {
     hint: 'Hint',
     youWin: 'YOU WIN!',
     gameOver: 'GAME OVER!',
+    youRanOutOfMoves: 'You ran out of moves!',
     tryAgain: 'Try Again',
     nextLevel: 'Next Level',
     resetEverything: 'Reset Everything?',
@@ -183,6 +184,7 @@ const TRANSLATIONS = {
     hint: 'Pista',
     youWin: '¡GANASTE!',
     gameOver: '¡JUEGO TERMINADO!',
+    youRanOutOfMoves: '¡Te quedaste sin movimientos!',
     tryAgain: 'Intentar de Nuevo',
     nextLevel: 'Siguiente Nivel',
     resetEverything: '¿Reiniciar Todo?',
@@ -241,6 +243,7 @@ const TRANSLATIONS = {
     hint: 'Indice',
     youWin: 'VICTOIRE!',
     gameOver: 'JEU TERMINÉ!',
+    youRanOutOfMoves: 'Vous n\'avez plus de coups!',
     tryAgain: 'Réessayer',
     nextLevel: 'Niveau Suivant',
     resetEverything: 'Tout Réinitialiser?',
@@ -299,6 +302,7 @@ const TRANSLATIONS = {
     hint: 'Hinweis',
     youWin: 'GEWONNEN!',
     gameOver: 'SPIEL VORBEI!',
+    youRanOutOfMoves: 'Du hast keine Züge mehr!',
     tryAgain: 'Nochmal Versuchen',
     nextLevel: 'Nächstes Level',
     resetEverything: 'Alles Zurücksetzen?',
@@ -357,6 +361,7 @@ const TRANSLATIONS = {
     hint: 'Suggerimento',
     youWin: 'HAI VINTO!',
     gameOver: 'GIOCO FINITO!',
+    youRanOutOfMoves: 'Hai finito le mosse!',
     tryAgain: 'Riprova',
     nextLevel: 'Livello Successivo',
     resetEverything: 'Resettare Tutto?',
@@ -415,6 +420,7 @@ const TRANSLATIONS = {
     hint: 'Dica',
     youWin: 'VOCÊ VENCEU!',
     gameOver: 'FIM DE JOGO!',
+    youRanOutOfMoves: 'Você ficou sem movimentos!',
     tryAgain: 'Tentar Novamente',
     nextLevel: 'Próximo Nível',
     resetEverything: 'Resetar Tudo?',
@@ -473,6 +479,7 @@ const TRANSLATIONS = {
     hint: 'ヒント',
     youWin: '勝利！',
     gameOver: 'ゲームオーバー！',
+    youRanOutOfMoves: '移動がなくなりました！',
     tryAgain: 'もう一度',
     nextLevel: '次のレベル',
     resetEverything: 'すべてリセット？',
@@ -531,6 +538,7 @@ const TRANSLATIONS = {
     hint: '힌트',
     youWin: '승리!',
     gameOver: '게임 오버!',
+    youRanOutOfMoves: '이동이 없습니다!',
     tryAgain: '다시 시도',
     nextLevel: '다음 레벨',
     resetEverything: '모두 초기화?',
@@ -589,6 +597,7 @@ const TRANSLATIONS = {
     hint: '提示',
     youWin: '你赢了！',
     gameOver: '游戏结束！',
+    youRanOutOfMoves: '你用完了所有移动！',
     tryAgain: '再试一次',
     nextLevel: '下一关',
     resetEverything: '重置所有？',
@@ -2391,7 +2400,7 @@ export default function MemoryGame() {
             onClick={() => setShowSettings(true)}
             className="bg-white text-purple-600 font-bold py-1 px-3 rounded text-sm hover:bg-gray-100 transition-colors"
           >
-            ⚙️ Settings
+            ⚙️ {t('settings')}
           </button>
           <h1 className="text-xl font-bold text-white">Memory Game</h1>
           {gameMode === 'single' && (
@@ -2607,8 +2616,8 @@ export default function MemoryGame() {
               height: `${cardSize * rows + (rows - 1) * 2}px`
             }}>
               <div className="text-center">
-                <h1 className="text-5xl font-bold text-red-400 mb-4">GAME OVER!</h1>
-                <p className="text-white text-lg">You ran out of moves!</p>
+                <h1 className="text-5xl font-bold text-red-400 mb-4">{t('gameOver')}</h1>
+                <p className="text-white text-lg">{t('youRanOutOfMoves')}</p>
                 <button
                   onClick={() => {
                     if (gameMode === 'single') {
@@ -2633,7 +2642,7 @@ export default function MemoryGame() {
                   }}
                   className="mt-4 bg-red-500 text-white font-bold py-2 px-6 rounded hover:bg-red-600 transition-colors"
                 >
-                  Start Over
+                  {t('tryAgain')}
                 </button>
               </div>
             </div>
@@ -2662,7 +2671,7 @@ export default function MemoryGame() {
                   filter: 'drop-shadow(0 0 10px gold)',
                   isolation: 'isolate'
                 }}>
-                  YOU WIN!
+                  {t('youWin')}
                 </h1>
                 <div className="text-6xl animate-pulse">🏆</div>
               </div>
@@ -2845,7 +2854,7 @@ export default function MemoryGame() {
                   : 'bg-blue-500 text-white hover:bg-blue-600'
               }`}
             >
-              💡 Help {hintCooldown ? `(${hintCooldownTime}s)` : ''}
+              💡 {t('hint')} {hintCooldown ? `(${hintCooldownTime}s)` : ''}
             </button>
           )}
         </div>
