@@ -166,7 +166,8 @@ const TRANSLATIONS = {
     opening: 'Opening...',
     availableFromStart: 'Available from start',
     completeLevel: 'Complete Level',
-    toUnlock: 'to unlock!'
+    toUnlock: 'to unlock!',
+    yourProgress: 'Your Progress'
   },
   es: {
     selectLanguage: 'Selecciona tu idioma',
@@ -225,7 +226,8 @@ const TRANSLATIONS = {
     opening: 'Abriendo...',
     availableFromStart: 'Disponible desde el inicio',
     completeLevel: 'Completa el Nivel',
-    toUnlock: 'para desbloquear!'
+    toUnlock: 'para desbloquear!',
+    yourProgress: 'Tu Progreso'
   },
   fr: {
     selectLanguage: 'Sélectionnez votre langue',
@@ -284,7 +286,8 @@ const TRANSLATIONS = {
     opening: 'Ouverture...',
     availableFromStart: 'Disponible dès le début',
     completeLevel: 'Terminez le Niveau',
-    toUnlock: 'pour débloquer!'
+    toUnlock: 'pour débloquer!',
+    yourProgress: 'Votre Progrès'
   },
   de: {
     selectLanguage: 'Wähle deine Sprache',
@@ -343,7 +346,8 @@ const TRANSLATIONS = {
     opening: 'Wird geöffnet...',
     availableFromStart: 'Von Anfang an verfügbar',
     completeLevel: 'Schließe Level ab',
-    toUnlock: 'zum Freischalten!'
+    toUnlock: 'zum Freischalten!',
+    yourProgress: 'Dein Fortschritt'
   },
   it: {
     selectLanguage: 'Seleziona la tua lingua',
@@ -402,7 +406,8 @@ const TRANSLATIONS = {
     opening: 'Apertura...',
     availableFromStart: 'Disponibile dall\'inizio',
     completeLevel: 'Completa il Livello',
-    toUnlock: 'per sbloccare!'
+    toUnlock: 'per sbloccare!',
+    yourProgress: 'I Tuoi Progressi'
   },
   pt: {
     selectLanguage: 'Selecione seu idioma',
@@ -461,7 +466,8 @@ const TRANSLATIONS = {
     opening: 'Abrindo...',
     availableFromStart: 'Disponível desde o início',
     completeLevel: 'Complete o Nível',
-    toUnlock: 'para desbloquear!'
+    toUnlock: 'para desbloquear!',
+    yourProgress: 'Seu Progresso'
   },
   ja: {
     selectLanguage: '言語を選択',
@@ -520,7 +526,8 @@ const TRANSLATIONS = {
     opening: '開いています...',
     availableFromStart: '最初から利用可能',
     completeLevel: 'レベルをクリア',
-    toUnlock: 'で解除！'
+    toUnlock: 'で解除！',
+    yourProgress: 'あなたの進捗'
   },
   ko: {
     selectLanguage: '언어 선택',
@@ -579,7 +586,8 @@ const TRANSLATIONS = {
     opening: '열고 있어요...',
     availableFromStart: '처음부터 사용 가능',
     completeLevel: '레벨 완료',
-    toUnlock: '잠금 해제하려면!'
+    toUnlock: '잠금 해제하려면!',
+    yourProgress: '진행 상황'
   },
   zh: {
     selectLanguage: '选择语言',
@@ -638,7 +646,8 @@ const TRANSLATIONS = {
     opening: '正在打开...',
     availableFromStart: '从开始就可用',
     completeLevel: '完成关卡',
-    toUnlock: '来解锁！'
+    toUnlock: '来解锁！',
+    yourProgress: '你的进度'
   }
 }
 
@@ -1872,25 +1881,9 @@ export default function MemoryGame() {
           {/* Card Color Selection */}
           <div className="text-center bg-white bg-opacity-20 rounded-2xl p-6 backdrop-blur-sm">
             <h2 className="text-lg font-bold mb-2">
-              <span className="text-red-500">🌈</span>
-              <span className="text-red-500"> P</span>
-              <span className="text-orange-500">i</span>
-              <span className="text-yellow-500">c</span>
-              <span className="text-green-500">k</span>
-              <span className="text-blue-500"> Y</span>
-              <span className="text-indigo-500">o</span>
-              <span className="text-purple-500">u</span>
-              <span className="text-pink-500">r</span>
-              <span className="text-red-500"> C</span>
-              <span className="text-orange-500">a</span>
-              <span className="text-yellow-500">r</span>
-              <span className="text-green-500">d</span>
-              <span className="text-blue-500"> C</span>
-              <span className="text-indigo-500">o</span>
-              <span className="text-purple-500">l</span>
-              <span className="text-pink-500">o</span>
-              <span className="text-red-500">r</span>
-              <span className="text-orange-500">!</span>
+              <span className="bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+                🌈 {t('pickCardColor')}
+              </span>
             </h2>
             <div className="space-y-2">
               {/* First row: Default, Blue, Purple, Red, Rainbow */}
@@ -2079,7 +2072,7 @@ export default function MemoryGame() {
 
           {/* Progress/Unlock Status */}
           <div className="text-center bg-white bg-opacity-20 rounded-xl p-4 backdrop-blur-sm">
-            <h3 className="text-black text-lg font-bold mb-2">🏆 Your Progress</h3>
+            <h3 className="text-black text-lg font-bold mb-2">🏆 {t('yourProgress')}</h3>
             {highestLevelCompleted > 0 ? (
               <p className="text-black text-sm mb-2">Highest Level Completed: {highestLevelCompleted}</p>
             ) : (
