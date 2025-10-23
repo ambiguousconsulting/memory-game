@@ -172,7 +172,20 @@ const TRANSLATIONS = {
     easyAndFun: 'Easy & Fun!',
     gettingHarder: 'Getting Harder!',
     challengeMode: 'Challenge Mode!',
-    years: 'years'
+    years: 'years',
+    memoryGame: 'Memory Game',
+    triesLeft: 'Tries Left',
+    left: 'left!',
+    easy: 'Easy',
+    challengesStarting: 'Challenges Starting',
+    extremeMode: 'Extreme Mode',
+    powerPlayer: 'Power Player',
+    focusMaster: 'Focus Master',
+    levelBoss: 'Level Boss',
+    championLevel: 'Champion Level',
+    starPlayer: 'Star Player',
+    diamondRank: 'Diamond Rank',
+    ultimateGamer: 'Ultimate Gamer'
   },
   es: {
     selectLanguage: 'Selecciona tu idioma',
@@ -236,7 +249,20 @@ const TRANSLATIONS = {
     easyAndFun: '¡Fácil y Divertido!',
     gettingHarder: '¡Más Difícil!',
     challengeMode: '¡Modo Desafío!',
-    years: 'años'
+    years: 'años',
+    memoryGame: 'Juego de Memoria',
+    triesLeft: 'Intentos Restantes',
+    left: '¡quedan!',
+    easy: 'Fácil',
+    challengesStarting: 'Desafíos Comenzando',
+    extremeMode: 'Modo Extremo',
+    powerPlayer: 'Jugador Poderoso',
+    focusMaster: 'Maestro del Enfoque',
+    levelBoss: 'Jefe de Nivel',
+    championLevel: 'Nivel Campeón',
+    starPlayer: 'Jugador Estrella',
+    diamondRank: 'Rango Diamante',
+    ultimateGamer: 'Jugador Definitivo'
   },
   fr: {
     selectLanguage: 'Sélectionnez votre langue',
@@ -300,7 +326,20 @@ const TRANSLATIONS = {
     easyAndFun: 'Facile & Amusant!',
     gettingHarder: 'Plus Difficile!',
     challengeMode: 'Mode Défi!',
-    years: 'ans'
+    years: 'ans',
+    memoryGame: 'Jeu de Mémoire',
+    triesLeft: 'Essais Restants',
+    left: 'restants!',
+    easy: 'Facile',
+    challengesStarting: 'Défis Commencent',
+    extremeMode: 'Mode Extrême',
+    powerPlayer: 'Joueur Puissant',
+    focusMaster: 'Maître de la Concentration',
+    levelBoss: 'Boss de Niveau',
+    championLevel: 'Niveau Champion',
+    starPlayer: 'Joueur Étoile',
+    diamondRank: 'Rang Diamant',
+    ultimateGamer: 'Joueur Ultime'
   },
   de: {
     selectLanguage: 'Wähle deine Sprache',
@@ -364,7 +403,20 @@ const TRANSLATIONS = {
     easyAndFun: 'Einfach & Spaß!',
     gettingHarder: 'Wird Schwerer!',
     challengeMode: 'Herausforderung!',
-    years: 'Jahre'
+    years: 'Jahre',
+    memoryGame: 'Gedächtnisspiel',
+    triesLeft: 'Versuche Übrig',
+    left: 'übrig!',
+    easy: 'Einfach',
+    challengesStarting: 'Herausforderungen Beginnen',
+    extremeMode: 'Extremer Modus',
+    powerPlayer: 'Power-Spieler',
+    focusMaster: 'Fokusmeister',
+    levelBoss: 'Level-Boss',
+    championLevel: 'Champion-Level',
+    starPlayer: 'Star-Spieler',
+    diamondRank: 'Diamant-Rang',
+    ultimateGamer: 'Ultimativer Spieler'
   },
   it: {
     selectLanguage: 'Seleziona la tua lingua',
@@ -428,7 +480,20 @@ const TRANSLATIONS = {
     easyAndFun: 'Facile e Divertente!',
     gettingHarder: 'Più Difficile!',
     challengeMode: 'Modalità Sfida!',
-    years: 'anni'
+    years: 'anni',
+    memoryGame: 'Gioco di Memoria',
+    triesLeft: 'Tentativi Rimasti',
+    left: 'rimasti!',
+    easy: 'Facile',
+    challengesStarting: 'Sfide Iniziano',
+    extremeMode: 'Modalità Estrema',
+    powerPlayer: 'Giocatore Potente',
+    focusMaster: 'Maestro della Concentrazione',
+    levelBoss: 'Boss di Livello',
+    championLevel: 'Livello Campione',
+    starPlayer: 'Giocatore Stella',
+    diamondRank: 'Rango Diamante',
+    ultimateGamer: 'Giocatore Definitivo'
   },
   pt: {
     selectLanguage: 'Selecione seu idioma',
@@ -492,7 +557,20 @@ const TRANSLATIONS = {
     easyAndFun: 'Fácil e Divertido!',
     gettingHarder: 'Ficando Difícil!',
     challengeMode: 'Modo Desafio!',
-    years: 'anos'
+    years: 'anos',
+    memoryGame: 'Jogo de Memória',
+    triesLeft: 'Tentativas Restantes',
+    left: 'restantes!',
+    easy: 'Fácil',
+    challengesStarting: 'Desafios Começando',
+    extremeMode: 'Modo Extremo',
+    powerPlayer: 'Jogador Poderoso',
+    focusMaster: 'Mestre do Foco',
+    levelBoss: 'Chefe de Nível',
+    championLevel: 'Nível Campeão',
+    starPlayer: 'Jogador Estrela',
+    diamondRank: 'Classificação Diamante',
+    ultimateGamer: 'Jogador Definitivo'
   },
   hr: {
     selectLanguage: 'Odaberite jezik',
@@ -556,7 +634,20 @@ const TRANSLATIONS = {
     easyAndFun: 'Lako i zabavno!',
     gettingHarder: 'Postaje teže!',
     challengeMode: 'Način izazova!',
-    years: 'godina'
+    years: 'godina',
+    memoryGame: 'Igra Pamćenja',
+    triesLeft: 'Preostali Pokušaji',
+    left: 'preostalo!',
+    easy: 'Lako',
+    challengesStarting: 'Izazovi Počinju',
+    extremeMode: 'Ekstremni Način',
+    powerPlayer: 'Moćni Igrač',
+    focusMaster: 'Majstor Fokusa',
+    levelBoss: 'Šef Razine',
+    championLevel: 'Razina Prvaka',
+    starPlayer: 'Zvjezdani Igrač',
+    diamondRank: 'Dijamantski Rang',
+    ultimateGamer: 'Ultimativni Igrač'
   },
   ja: {
     selectLanguage: '言語を選択',
@@ -620,7 +711,20 @@ const TRANSLATIONS = {
     easyAndFun: '簡単で楽しい！',
     gettingHarder: '難しくなる！',
     challengeMode: 'チャレンジモード！',
-    years: '歳'
+    years: '歳',
+    memoryGame: 'メモリーゲーム',
+    triesLeft: '残りの試行回数',
+    left: '残り！',
+    easy: 'かんたん',
+    challengesStarting: 'チャレンジスタート',
+    extremeMode: 'エクストリームモード',
+    powerPlayer: 'パワープレイヤー',
+    focusMaster: '集中マスター',
+    levelBoss: 'レベルボス',
+    championLevel: 'チャンピオンレベル',
+    starPlayer: 'スタープレイヤー',
+    diamondRank: 'ダイヤモンドランク',
+    ultimateGamer: 'アルティメットゲーマー'
   },
   ko: {
     selectLanguage: '언어 선택',
@@ -684,7 +788,20 @@ const TRANSLATIONS = {
     easyAndFun: '쉽고 재미있어요!',
     gettingHarder: '더 어려워져요!',
     challengeMode: '도전 모드!',
-    years: '세'
+    years: '세',
+    memoryGame: '기억력 게임',
+    triesLeft: '남은 시도',
+    left: '남음!',
+    easy: '쉬움',
+    challengesStarting: '도전 시작',
+    extremeMode: '익스트림 모드',
+    powerPlayer: '파워 플레이어',
+    focusMaster: '집중력 마스터',
+    levelBoss: '레벨 보스',
+    championLevel: '챔피언 레벨',
+    starPlayer: '스타 플레이어',
+    diamondRank: '다이아몬드 랭크',
+    ultimateGamer: '얼티밋 게이머'
   },
   zh: {
     selectLanguage: '选择语言',
@@ -748,7 +865,20 @@ const TRANSLATIONS = {
     easyAndFun: '简单有趣！',
     gettingHarder: '越来越难！',
     challengeMode: '挑战模式！',
-    years: '岁'
+    years: '岁',
+    memoryGame: '记忆游戏',
+    triesLeft: '剩余尝试',
+    left: '剩余！',
+    easy: '简单',
+    challengesStarting: '挑战开始',
+    extremeMode: '极限模式',
+    powerPlayer: '强力玩家',
+    focusMaster: '专注大师',
+    levelBoss: '关卡老板',
+    championLevel: '冠军级别',
+    starPlayer: '明星玩家',
+    diamondRank: '钻石段位',
+    ultimateGamer: '终极玩家'
   }
 }
 
@@ -1083,6 +1213,33 @@ export default function MemoryGame() {
   // Helper function to get translated text
   const t = (key) => {
     return TRANSLATIONS[language]?.[key] || TRANSLATIONS['en'][key] || key
+  }
+
+  // Helper function to translate level names
+  const translateLevelName = (levelName) => {
+    // Extract emoji prefix and level text
+    const parts = levelName.split(' ')
+    const emoji = parts[0] // First part is emoji
+    const levelText = parts.slice(1).join(' ') // Rest is the level name
+
+    // Map level text to translation keys
+    const levelMap = {
+      'Easy': 'easy',
+      'Challenges Starting': 'challengesStarting',
+      'Extreme Mode': 'extremeMode',
+      'Power Player': 'powerPlayer',
+      'Focus Master': 'focusMaster',
+      'Level Boss': 'levelBoss',
+      'Champion Level': 'championLevel',
+      'Star Player': 'starPlayer',
+      'Diamond Rank': 'diamondRank',
+      'Ultimate Gamer': 'ultimateGamer'
+    }
+
+    const translationKey = levelMap[levelText]
+    const translatedText = translationKey ? t(translationKey) : levelText
+
+    return `${emoji} ${translatedText}`
   }
 
   // Function to play sounds using Web Audio API
@@ -2496,7 +2653,7 @@ export default function MemoryGame() {
           >
             ⚙️ {t('settings')}
           </button>
-          <h1 className="text-xl font-bold text-white">Memory Game</h1>
+          <h1 className="text-xl font-bold text-white">{t('memoryGame')}</h1>
           {gameMode === 'single' && (
             <div className="flex gap-2">
               <button
@@ -2529,7 +2686,7 @@ export default function MemoryGame() {
           {gameMode === 'single' && (
             <>
               <div className="text-center mb-1">
-                <h2 className="text-lg font-bold text-white">{currentLevelConfig.name}</h2>
+                <h2 className="text-lg font-bold text-white">{translateLevelName(currentLevelConfig.name)}</h2>
                 {/* Progress stars */}
                 <div className="flex justify-center gap-1 mt-1">
                   {ageLevels.slice(0, currentLevel).map((_, i) => {
@@ -2549,7 +2706,7 @@ export default function MemoryGame() {
               {/* Only show tries for single player */}
               {gameMode === 'single' && (
                 <div className="text-center">
-                  <p className="text-white text-lg font-bold mb-2">Tries Left</p>
+                  <p className="text-white text-lg font-bold mb-2">{t('triesLeft')}</p>
                   <div className="flex justify-center gap-1">
                     {[...Array(totalMovesAvailable)].map((_, i) => (
                       <div
@@ -2561,11 +2718,11 @@ export default function MemoryGame() {
                     ))}
                   </div>
                   <p className={`text-lg font-bold mt-1 ${
-                    totalMovesAvailable - movesUsed <= 2 ? 'text-red-300' : 
-                    totalMovesAvailable - movesUsed <= 5 ? 'text-yellow-300' : 
+                    totalMovesAvailable - movesUsed <= 2 ? 'text-red-300' :
+                    totalMovesAvailable - movesUsed <= 5 ? 'text-yellow-300' :
                     'text-green-300'
                   }`}>
-                    {totalMovesAvailable - movesUsed} left!
+                    {totalMovesAvailable - movesUsed} {t('left')}
                   </p>
                 </div>
               )}
