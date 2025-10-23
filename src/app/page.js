@@ -1932,12 +1932,29 @@ export default function MemoryGame() {
               <div className="text-lg text-yellow-200 mb-4">
                 Final Scores: {Object.entries(playerScores).map(([player, score]) => `${playerNames[player] || `Player ${player}`}: ${score}`).join(' | ')}
               </div>
-              <button
-                onClick={startMultiplayer}
-                className="mt-2 bg-yellow-400 text-purple-600 font-bold py-2 px-6 rounded-xl text-lg hover:bg-yellow-300 transition-colors transform hover:scale-105"
-              >
-                🎮 Play Again ({numPlayers} Players)
-              </button>
+              <div className="flex gap-4 justify-center">
+                <button
+                  onClick={startMultiplayer}
+                  className="mt-2 bg-yellow-400 text-purple-600 font-bold py-2 px-6 rounded-xl text-lg hover:bg-yellow-300 transition-colors transform hover:scale-105"
+                >
+                  🎮 Play Again ({numPlayers} Players)
+                </button>
+                <button
+                  onClick={() => {
+                    setGameMode('single')
+                    setGameWinner(null)
+                    setIsWon(false)
+                    setCurrentLevel(1)
+                    setMovesUsed(0)
+                    setTotalMovesAvailable(4)
+                    shuffleCards(1)
+                    playSound('click', 0.2)
+                  }}
+                  className="mt-2 bg-white text-purple-600 font-bold py-2 px-6 rounded-xl text-lg hover:bg-gray-100 transition-colors transform hover:scale-105"
+                >
+                  🏠 Back to Menu
+                </button>
+              </div>
             </div>
           )}
         </div>
