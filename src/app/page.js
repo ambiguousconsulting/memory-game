@@ -158,7 +158,11 @@ const TRANSLATIONS = {
     startGame: 'Start Game',
     player: 'Player',
     turn: 'Turn',
+    sTurn: "'s turn",
+    tie: "It's a tie!",
     wins: 'Wins!',
+    reachedTenPointsFirst: 'reached 10 points first!',
+    finalScores: 'Final Scores:',
     score: 'Score',
     level: 'Level',
     newUnlocks: 'NEW UNLOCKS!',
@@ -185,7 +189,15 @@ const TRANSLATIONS = {
     championLevel: 'Champion Level',
     starPlayer: 'Star Player',
     diamondRank: 'Diamond Rank',
-    ultimateGamer: 'Ultimate Gamer'
+    ultimateGamer: 'Ultimate Gamer',
+    defaultWhite: 'Default White',
+    oceanBlue: 'Ocean Blue',
+    magicPurple: 'Magic Purple',
+    prettyPink: 'Pretty Pink',
+    natureGreen: 'Nature Green',
+    sunnyOrange: 'Sunny Orange',
+    cherryRed: 'Cherry Red',
+    rainbowMagic: 'Rainbow Magic'
   },
   es: {
     selectLanguage: 'Selecciona tu idioma',
@@ -235,7 +247,11 @@ const TRANSLATIONS = {
     startGame: 'Iniciar Juego',
     player: 'Jugador',
     turn: 'Turno',
+    sTurn: "'s turno",
+    tie: "¡Es un empate!",
     wins: '¡Gana!',
+    reachedTenPointsFirst: '¡alcanzó 10 puntos primero!',
+    finalScores: 'Puntuaciones finales:',
     score: 'Puntuación',
     level: 'Nivel',
     newUnlocks: '¡NUEVOS DESBLOQUEOS!',
@@ -262,7 +278,15 @@ const TRANSLATIONS = {
     championLevel: 'Nivel Campeón',
     starPlayer: 'Jugador Estrella',
     diamondRank: 'Rango Diamante',
-    ultimateGamer: 'Jugador Definitivo'
+    ultimateGamer: 'Jugador Definitivo',
+    defaultWhite: 'Blanco Predeterminado',
+    oceanBlue: 'Azul Océano',
+    magicPurple: 'Púrpura Mágico',
+    prettyPink: 'Rosa Bonito',
+    natureGreen: 'Verde Naturaleza',
+    sunnyOrange: 'Naranja Soleado',
+    cherryRed: 'Rojo Cereza',
+    rainbowMagic: 'Magia Arcoíris'
   },
   fr: {
     selectLanguage: 'Sélectionnez votre langue',
@@ -312,7 +336,11 @@ const TRANSLATIONS = {
     startGame: 'Commencer le Jeu',
     player: 'Joueur',
     turn: 'Tour',
+    sTurn: " joue",
+    tie: "C'est une égalité!",
     wins: 'Gagne!',
+    reachedTenPointsFirst: 'a atteint 10 points en premier!',
+    finalScores: 'Scores finaux:',
     score: 'Score',
     level: 'Niveau',
     newUnlocks: 'NOUVEAUX DÉBLOCAGES!',
@@ -339,7 +367,15 @@ const TRANSLATIONS = {
     championLevel: 'Niveau Champion',
     starPlayer: 'Joueur Étoile',
     diamondRank: 'Rang Diamant',
-    ultimateGamer: 'Joueur Ultime'
+    ultimateGamer: 'Joueur Ultime',
+    defaultWhite: 'Blanc Par Défaut',
+    oceanBlue: 'Bleu Océan',
+    magicPurple: 'Violet Magique',
+    prettyPink: 'Rose Joli',
+    natureGreen: 'Vert Nature',
+    sunnyOrange: 'Orange Ensoleillé',
+    cherryRed: 'Rouge Cerise',
+    rainbowMagic: 'Magie Arc-en-ciel'
   },
   de: {
     selectLanguage: 'Wähle deine Sprache',
@@ -389,7 +425,11 @@ const TRANSLATIONS = {
     startGame: 'Spiel Starten',
     player: 'Spieler',
     turn: 'Zug',
+    sTurn: " ist dran",
+    tie: "Es ist ein Unentschieden!",
     wins: 'Gewinnt!',
+    reachedTenPointsFirst: 'hat zuerst 10 Punkte erreicht!',
+    finalScores: 'Endergebnisse:',
     score: 'Punktzahl',
     level: 'Level',
     newUnlocks: 'NEUE FREISCHALTUNGEN!',
@@ -416,7 +456,15 @@ const TRANSLATIONS = {
     championLevel: 'Champion-Level',
     starPlayer: 'Star-Spieler',
     diamondRank: 'Diamant-Rang',
-    ultimateGamer: 'Ultimativer Spieler'
+    ultimateGamer: 'Ultimativer Spieler',
+    defaultWhite: 'Standard Weiß',
+    oceanBlue: 'Ozean Blau',
+    magicPurple: 'Magisches Lila',
+    prettyPink: 'Hübsches Rosa',
+    natureGreen: 'Natur Grün',
+    sunnyOrange: 'Sonniges Orange',
+    cherryRed: 'Kirsch Rot',
+    rainbowMagic: 'Regenbogen Magie'
   },
   it: {
     selectLanguage: 'Seleziona la tua lingua',
@@ -466,7 +514,11 @@ const TRANSLATIONS = {
     startGame: 'Inizia il Gioco',
     player: 'Giocatore',
     turn: 'Turno',
+    sTurn: " gioca",
+    tie: "È un pareggio!",
     wins: 'Vince!',
+    reachedTenPointsFirst: 'ha raggiunto 10 punti per primo!',
+    finalScores: 'Punteggi finali:',
     score: 'Punteggio',
     level: 'Livello',
     newUnlocks: 'NUOVI SBLOCCHI!',
@@ -493,7 +545,15 @@ const TRANSLATIONS = {
     championLevel: 'Livello Campione',
     starPlayer: 'Giocatore Stella',
     diamondRank: 'Rango Diamante',
-    ultimateGamer: 'Giocatore Definitivo'
+    ultimateGamer: 'Giocatore Definitivo',
+    defaultWhite: 'Bianco Predefinito',
+    oceanBlue: 'Blu Oceano',
+    magicPurple: 'Viola Magico',
+    prettyPink: 'Rosa Grazioso',
+    natureGreen: 'Verde Natura',
+    sunnyOrange: 'Arancione Soleggiato',
+    cherryRed: 'Rosso Ciliegia',
+    rainbowMagic: 'Magia Arcobaleno'
   },
   pt: {
     selectLanguage: 'Selecione seu idioma',
@@ -543,7 +603,11 @@ const TRANSLATIONS = {
     startGame: 'Iniciar Jogo',
     player: 'Jogador',
     turn: 'Vez',
+    sTurn: " joga",
+    tie: "É um empate!",
     wins: 'Vence!',
+    reachedTenPointsFirst: 'alcançou 10 pontos primeiro!',
+    finalScores: 'Pontuações finais:',
     score: 'Pontuação',
     level: 'Nível',
     newUnlocks: 'NOVOS DESBLOQUEIOS!',
@@ -570,7 +634,15 @@ const TRANSLATIONS = {
     championLevel: 'Nível Campeão',
     starPlayer: 'Jogador Estrela',
     diamondRank: 'Classificação Diamante',
-    ultimateGamer: 'Jogador Definitivo'
+    ultimateGamer: 'Jogador Definitivo',
+    defaultWhite: 'Branco Padrão',
+    oceanBlue: 'Azul Oceano',
+    magicPurple: 'Roxo Mágico',
+    prettyPink: 'Rosa Bonito',
+    natureGreen: 'Verde Natureza',
+    sunnyOrange: 'Laranja Ensolarado',
+    cherryRed: 'Vermelho Cereja',
+    rainbowMagic: 'Magia Arco-Íris'
   },
   hr: {
     selectLanguage: 'Odaberite jezik',
@@ -620,7 +692,11 @@ const TRANSLATIONS = {
     startGame: 'Počni igru',
     player: 'Igrač',
     turn: 'Red',
+    sTurn: " je na potezu",
+    tie: "Izjednačeno!",
     wins: 'Pobjeđuje!',
+    reachedTenPointsFirst: 'je prvi dostigao 10 bodova!',
+    finalScores: 'Konačni rezultati:',
     score: 'Rezultat',
     level: 'Razina',
     newUnlocks: 'NOVA OTKLJUČAVANJA!',
@@ -647,7 +723,15 @@ const TRANSLATIONS = {
     championLevel: 'Razina Prvaka',
     starPlayer: 'Zvjezdani Igrač',
     diamondRank: 'Dijamantski Rang',
-    ultimateGamer: 'Ultimativni Igrač'
+    ultimateGamer: 'Ultimativni Igrač',
+    defaultWhite: 'Zadana Bijela',
+    oceanBlue: 'Ocean Plava',
+    magicPurple: 'Čarobna Ljubičasta',
+    prettyPink: 'Lijepa Ružičasta',
+    natureGreen: 'Prirodna Zelena',
+    sunnyOrange: 'Sunčana Narančasta',
+    cherryRed: 'Trešnja Crvena',
+    rainbowMagic: 'Dužična Čarolija'
   },
   ja: {
     selectLanguage: '言語を選択',
@@ -697,7 +781,11 @@ const TRANSLATIONS = {
     startGame: 'ゲーム開始',
     player: 'プレイヤー',
     turn: 'ターン',
+    sTurn: "のターン",
+    tie: "引き分けです！",
     wins: '勝ち！',
+    reachedTenPointsFirst: 'が最初に10ポイントに到達！',
+    finalScores: '最終スコア：',
     score: 'スコア',
     level: 'レベル',
     newUnlocks: '新しいアイテム解除！',
@@ -724,7 +812,15 @@ const TRANSLATIONS = {
     championLevel: 'チャンピオンレベル',
     starPlayer: 'スタープレイヤー',
     diamondRank: 'ダイヤモンドランク',
-    ultimateGamer: 'アルティメットゲーマー'
+    ultimateGamer: 'アルティメットゲーマー',
+    defaultWhite: 'デフォルトホワイト',
+    oceanBlue: 'オーシャンブルー',
+    magicPurple: 'マジックパープル',
+    prettyPink: 'プリティピンク',
+    natureGreen: 'ネイチャーグリーン',
+    sunnyOrange: 'サニーオレンジ',
+    cherryRed: 'チェリーレッド',
+    rainbowMagic: 'レインボーマジック'
   },
   ko: {
     selectLanguage: '언어 선택',
@@ -774,7 +870,11 @@ const TRANSLATIONS = {
     startGame: '게임 시작',
     player: '플레이어',
     turn: '턴',
+    sTurn: "의 차례",
+    tie: "무승부입니다!",
     wins: '승리!',
+    reachedTenPointsFirst: '가 먼저 10점에 도달했습니다!',
+    finalScores: '최종 점수:',
     score: '점수',
     level: '레벨',
     newUnlocks: '새로운 잠금 해제!',
@@ -801,7 +901,15 @@ const TRANSLATIONS = {
     championLevel: '챔피언 레벨',
     starPlayer: '스타 플레이어',
     diamondRank: '다이아몬드 랭크',
-    ultimateGamer: '얼티밋 게이머'
+    ultimateGamer: '얼티밋 게이머',
+    defaultWhite: '기본 화이트',
+    oceanBlue: '오션 블루',
+    magicPurple: '매직 퍼플',
+    prettyPink: '프리티 핑크',
+    natureGreen: '네이처 그린',
+    sunnyOrange: '써니 오렌지',
+    cherryRed: '체리 레드',
+    rainbowMagic: '레인보우 매직'
   },
   zh: {
     selectLanguage: '选择语言',
@@ -851,7 +959,11 @@ const TRANSLATIONS = {
     startGame: '开始游戏',
     player: '玩家',
     turn: '回合',
+    sTurn: "的回合",
+    tie: "平局！",
     wins: '获胜！',
+    reachedTenPointsFirst: '首先达到10分！',
+    finalScores: '最终得分：',
     score: '得分',
     level: '关卡',
     newUnlocks: '新解锁！',
@@ -878,7 +990,15 @@ const TRANSLATIONS = {
     championLevel: '冠军级别',
     starPlayer: '明星玩家',
     diamondRank: '钻石段位',
-    ultimateGamer: '终极玩家'
+    ultimateGamer: '终极玩家',
+    defaultWhite: '默认白色',
+    oceanBlue: '海洋蓝',
+    magicPurple: '魔法紫',
+    prettyPink: '漂亮粉',
+    natureGreen: '自然绿',
+    sunnyOrange: '阳光橙',
+    cherryRed: '樱桃红',
+    rainbowMagic: '彩虹魔法'
   }
 }
 
@@ -1238,6 +1358,31 @@ export default function MemoryGame() {
 
     const translationKey = levelMap[levelText]
     const translatedText = translationKey ? t(translationKey) : levelText
+
+    return `${emoji} ${translatedText}`
+  }
+
+  // Helper function to translate card color names
+  const translateCardColorName = (colorName) => {
+    // Extract emoji and color text
+    const parts = colorName.split(' ')
+    const emoji = parts[0] // First part is emoji
+    const colorText = parts.slice(1).join(' ') // Rest is the color name
+
+    // Map color text to translation keys
+    const colorMap = {
+      'Default White': 'defaultWhite',
+      'Ocean Blue': 'oceanBlue',
+      'Magic Purple': 'magicPurple',
+      'Pretty Pink': 'prettyPink',
+      'Nature Green': 'natureGreen',
+      'Sunny Orange': 'sunnyOrange',
+      'Cherry Red': 'cherryRed',
+      'Rainbow Magic': 'rainbowMagic'
+    }
+
+    const translationKey = colorMap[colorText]
+    const translatedText = translationKey ? t(translationKey) : colorText
 
     return `${emoji} ${translatedText}`
   }
@@ -2173,7 +2318,7 @@ export default function MemoryGame() {
                       }`}
                     >
                       <div className="text-xs font-bold" style={{ color: !isUnlocked ? '#666' : '#000' }}>
-                        {isUnlocked ? color.name : `🔒 ${color.unlockDescription}`}
+                        {isUnlocked ? translateCardColorName(color.name) : `🔒 ${color.unlockDescription}`}
                       </div>
                     </button>
                   )
@@ -2205,7 +2350,7 @@ export default function MemoryGame() {
                       }`}
                     >
                       <div className="text-xs font-bold" style={{ color: !isUnlocked ? '#666' : '#000' }}>
-                        {isUnlocked ? color.name : `🔒 ${color.unlockDescription}`}
+                        {isUnlocked ? translateCardColorName(color.name) : `🔒 ${color.unlockDescription}`}
                       </div>
                     </button>
                   )
@@ -2356,7 +2501,7 @@ export default function MemoryGame() {
                   ))}
                   {Object.entries(CARD_COLORS).filter(([key, color]) => color.unlockLevel > highestLevelCompleted && color.unlockLevel <= highestLevelCompleted + 3).map(([key, color]) => (
                     <div key={key} className="text-black">
-                      🔒 Level {color.unlockLevel}: {color.name}
+                      🔒 Level {color.unlockLevel}: {translateCardColorName(color.name)}
                     </div>
                   ))}
                   {/* Show sparkly unlock */}
@@ -2739,9 +2884,9 @@ export default function MemoryGame() {
                 {/* Current Turn Display */}
                 <div className="text-center">
                   <p className="text-white font-bold text-lg">
-                    {gameWinner ? 
-                      (gameWinner === 'tie' ? "It&apos;s a tie!" : `${playerNames[gameWinner] || `Player ${gameWinner}`} wins!`) :
-                      `${playerNames[currentPlayer] || `Player ${currentPlayer}`}'s turn`
+                    {gameWinner ?
+                      (gameWinner === 'tie' ? t('tie') : `${playerNames[gameWinner] || `${t('player')} ${gameWinner}`} ${t('wins')}`) :
+                      `${playerNames[currentPlayer] || `${t('player')} ${currentPlayer}`}${t('sTurn')}`
                     }
                   </p>
                 </div>
@@ -2809,10 +2954,10 @@ export default function MemoryGame() {
             <div className="text-center mt-2">
               <h2 className="text-3xl font-bold text-yellow-300 animate-bounce mb-4">🏆 WINNER! 🏆</h2>
               <p className="text-white text-xl mb-2">
-                {gameWinner === 'tie' ? "It&apos;s a tie!" : `${playerNames[gameWinner] || `Player ${gameWinner}`} reached 10 points first!`}
+                {gameWinner === 'tie' ? t('tie') : `${playerNames[gameWinner] || `${t('player')} ${gameWinner}`} ${t('reachedTenPointsFirst')}`}
               </p>
               <div className="text-lg text-yellow-200 mb-4">
-                Final Scores: {Object.entries(playerScores).map(([player, score]) => `${playerNames[player] || `Player ${player}`}: ${score}`).join(' | ')}
+                {t('finalScores')} {Object.entries(playerScores).map(([player, score]) => `${playerNames[player] || `${t('player')} ${player}`}: ${score}`).join(' | ')}
               </div>
               <div className="flex gap-4 justify-center">
                 <button
