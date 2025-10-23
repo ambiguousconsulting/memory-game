@@ -1740,10 +1740,17 @@ export default function MemoryGame() {
                   setInventory({ apples: 0, berries: 0, fish: 0, gems: 0, treasures: 0, mystery: 0 })
                   setAchievements([])
                   setLastViewedBadgeCount(0)
+                  setIsWon(false)
+                  setIsGameOver(false)
+                  setMatchedCards([])
+                  setFlippedCards([])
 
                   playSound('click', 0.2)
                   setShowResetAllConfirm(false)
                   setShowSettings(false)
+
+                  // Shuffle cards to refresh the game
+                  shuffleCards(1)
                 }}
                 className="bg-red-600 text-white font-bold py-3 px-8 rounded-xl text-lg hover:bg-red-700 transition-all transform hover:scale-105 shadow-lg"
               >
