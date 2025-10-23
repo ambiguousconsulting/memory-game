@@ -167,7 +167,11 @@ const TRANSLATIONS = {
     availableFromStart: 'Available from start',
     completeLevel: 'Complete Level',
     toUnlock: 'to unlock!',
-    yourProgress: 'Your Progress'
+    yourProgress: 'Your Progress',
+    easyAndFun: 'Easy & Fun!',
+    gettingHarder: 'Getting Harder!',
+    challengeMode: 'Challenge Mode!',
+    years: 'years'
   },
   es: {
     selectLanguage: 'Selecciona tu idioma',
@@ -227,7 +231,11 @@ const TRANSLATIONS = {
     availableFromStart: 'Disponible desde el inicio',
     completeLevel: 'Completa el Nivel',
     toUnlock: 'para desbloquear!',
-    yourProgress: 'Tu Progreso'
+    yourProgress: 'Tu Progreso',
+    easyAndFun: '¡Fácil y Divertido!',
+    gettingHarder: '¡Más Difícil!',
+    challengeMode: '¡Modo Desafío!',
+    years: 'años'
   },
   fr: {
     selectLanguage: 'Sélectionnez votre langue',
@@ -287,7 +295,11 @@ const TRANSLATIONS = {
     availableFromStart: 'Disponible dès le début',
     completeLevel: 'Terminez le Niveau',
     toUnlock: 'pour débloquer!',
-    yourProgress: 'Votre Progrès'
+    yourProgress: 'Votre Progrès',
+    easyAndFun: 'Facile & Amusant!',
+    gettingHarder: 'Plus Difficile!',
+    challengeMode: 'Mode Défi!',
+    years: 'ans'
   },
   de: {
     selectLanguage: 'Wähle deine Sprache',
@@ -347,7 +359,11 @@ const TRANSLATIONS = {
     availableFromStart: 'Von Anfang an verfügbar',
     completeLevel: 'Schließe Level ab',
     toUnlock: 'zum Freischalten!',
-    yourProgress: 'Dein Fortschritt'
+    yourProgress: 'Dein Fortschritt',
+    easyAndFun: 'Einfach & Spaß!',
+    gettingHarder: 'Wird Schwerer!',
+    challengeMode: 'Herausforderung!',
+    years: 'Jahre'
   },
   it: {
     selectLanguage: 'Seleziona la tua lingua',
@@ -407,7 +423,11 @@ const TRANSLATIONS = {
     availableFromStart: 'Disponibile dall\'inizio',
     completeLevel: 'Completa il Livello',
     toUnlock: 'per sbloccare!',
-    yourProgress: 'I Tuoi Progressi'
+    yourProgress: 'I Tuoi Progressi',
+    easyAndFun: 'Facile e Divertente!',
+    gettingHarder: 'Più Difficile!',
+    challengeMode: 'Modalità Sfida!',
+    years: 'anni'
   },
   pt: {
     selectLanguage: 'Selecione seu idioma',
@@ -467,7 +487,11 @@ const TRANSLATIONS = {
     availableFromStart: 'Disponível desde o início',
     completeLevel: 'Complete o Nível',
     toUnlock: 'para desbloquear!',
-    yourProgress: 'Seu Progresso'
+    yourProgress: 'Seu Progresso',
+    easyAndFun: 'Fácil e Divertido!',
+    gettingHarder: 'Ficando Difícil!',
+    challengeMode: 'Modo Desafio!',
+    years: 'anos'
   },
   ja: {
     selectLanguage: '言語を選択',
@@ -527,7 +551,11 @@ const TRANSLATIONS = {
     availableFromStart: '最初から利用可能',
     completeLevel: 'レベルをクリア',
     toUnlock: 'で解除！',
-    yourProgress: 'あなたの進捗'
+    yourProgress: 'あなたの進捗',
+    easyAndFun: '簡単で楽しい！',
+    gettingHarder: '難しくなる！',
+    challengeMode: 'チャレンジモード！',
+    years: '歳'
   },
   ko: {
     selectLanguage: '언어 선택',
@@ -587,7 +615,11 @@ const TRANSLATIONS = {
     availableFromStart: '처음부터 사용 가능',
     completeLevel: '레벨 완료',
     toUnlock: '잠금 해제하려면!',
-    yourProgress: '진행 상황'
+    yourProgress: '진행 상황',
+    easyAndFun: '쉽고 재미있어요!',
+    gettingHarder: '더 어려워져요!',
+    challengeMode: '도전 모드!',
+    years: '세'
   },
   zh: {
     selectLanguage: '选择语言',
@@ -647,7 +679,11 @@ const TRANSLATIONS = {
     availableFromStart: '从开始就可用',
     completeLevel: '完成关卡',
     toUnlock: '来解锁！',
-    yourProgress: '你的进度'
+    yourProgress: '你的进度',
+    easyAndFun: '简单有趣！',
+    gettingHarder: '越来越难！',
+    challengeMode: '挑战模式！',
+    years: '岁'
   }
 }
 
@@ -1809,8 +1845,8 @@ export default function MemoryGame() {
                   }`}
                 >
                   <div className="text-xl mb-1">{age.emoji}</div>
-                  <div className="text-xs font-bold">{age.label}</div>
-                  <div className="text-xs">{age.desc}</div>
+                  <div className="text-xs font-bold">{age.key} {t('years')}</div>
+                  <div className="text-xs">{age.desc === 'Easy & Fun!' ? t('easyAndFun') : age.desc === 'Getting Harder!' ? t('gettingHarder') : t('challengeMode')}</div>
                 </button>
               ))}
             </div>
