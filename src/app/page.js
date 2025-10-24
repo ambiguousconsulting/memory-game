@@ -211,7 +211,32 @@ const TRANSLATIONS = {
     nextLevelStarting: 'Next level starting in...',
     winner: 'WINNER!',
     keepPlayingFirstTo10: 'Keep playing! First to 10 wins!',
-    playAgain: 'Play Again'
+    playAgain: 'Play Again',
+    // Achievements
+    firstMatchName: 'First Match!',
+    firstMatchDesc: 'Made your first match',
+    level5HeroName: 'Level 5 Hero',
+    level5HeroDesc: 'Reached level 5',
+    level10MasterName: 'Level 10 Master',
+    level10MasterDesc: 'Reached level 10',
+    perfectName: 'Perfect!',
+    perfectDesc: 'Got 3 stars on a level',
+    firstTreasureName: 'First Treasure',
+    firstTreasureDesc: 'Collected your first item',
+    collectorName: 'Collector',
+    collectorDesc: 'Collected 10 total items',
+    hoarderName: 'Hoarder',
+    hoarderDesc: 'Collected 50 total items',
+    multiplayerChampionName: 'Multiplayer Champion',
+    multiplayerChampionDesc: 'Won a multiplayer game',
+    speedsterName: 'Speedster',
+    speedsterDesc: 'Completed a level in under 10 moves',
+    themeCollectorName: 'Theme Collector',
+    themeCollectorDesc: 'Unlocked a new theme',
+    gemFinderName: 'Gem Finder',
+    gemFinderDesc: 'Found 5 gems',
+    fishermanName: 'Fisherman',
+    fishermanDesc: 'Caught 5 fish'
   },
   es: {
     selectLanguage: 'Selecciona tu idioma',
@@ -314,7 +339,32 @@ const TRANSLATIONS = {
     nextLevelStarting: 'Siguiente nivel comenzando en...',
     winner: '¡GANADOR!',
     keepPlayingFirstTo10: '¡Sigue jugando! ¡El primero en llegar a 10 gana!',
-    playAgain: 'Jugar de Nuevo'
+    playAgain: 'Jugar de Nuevo',
+    // Achievements
+    firstMatchName: '¡Primera Pareja!',
+    firstMatchDesc: 'Hiciste tu primera pareja',
+    level5HeroName: 'Héroe del Nivel 5',
+    level5HeroDesc: 'Alcanzaste el nivel 5',
+    level10MasterName: 'Maestro del Nivel 10',
+    level10MasterDesc: 'Alcanzaste el nivel 10',
+    perfectName: '¡Perfecto!',
+    perfectDesc: 'Obtuviste 3 estrellas en un nivel',
+    firstTreasureName: 'Primer Tesoro',
+    firstTreasureDesc: 'Recolectaste tu primer objeto',
+    collectorName: 'Coleccionista',
+    collectorDesc: 'Recolectaste 10 objetos en total',
+    hoarderName: 'Acaparador',
+    hoarderDesc: 'Recolectaste 50 objetos en total',
+    multiplayerChampionName: 'Campeón Multijugador',
+    multiplayerChampionDesc: 'Ganaste un juego multijugador',
+    speedsterName: 'Veloz',
+    speedsterDesc: 'Completaste un nivel en menos de 10 movimientos',
+    themeCollectorName: 'Coleccionista de Temas',
+    themeCollectorDesc: 'Desbloqueaste un nuevo tema',
+    gemFinderName: 'Buscador de Gemas',
+    gemFinderDesc: 'Encontraste 5 gemas',
+    fishermanName: 'Pescador',
+    fishermanDesc: 'Pescaste 5 peces'
   },
   fr: {
     selectLanguage: 'Sélectionnez votre langue',
@@ -417,7 +467,32 @@ const TRANSLATIONS = {
     nextLevelStarting: 'Prochain niveau commence dans...',
     winner: 'GAGNANT!',
     keepPlayingFirstTo10: 'Continuez à jouer! Le premier à 10 gagne!',
-    playAgain: 'Rejouer'
+    playAgain: 'Rejouer',
+    // Achievements
+    firstMatchName: 'Première Paire!',
+    firstMatchDesc: 'Fait votre première paire',
+    level5HeroName: 'Héros du Niveau 5',
+    level5HeroDesc: 'Atteint le niveau 5',
+    level10MasterName: 'Maître du Niveau 10',
+    level10MasterDesc: 'Atteint le niveau 10',
+    perfectName: 'Parfait!',
+    perfectDesc: 'Obtenu 3 étoiles sur un niveau',
+    firstTreasureName: 'Premier Trésor',
+    firstTreasureDesc: 'Collecté votre premier objet',
+    collectorName: 'Collectionneur',
+    collectorDesc: 'Collecté 10 objets au total',
+    hoarderName: 'Accumulateur',
+    hoarderDesc: 'Collecté 50 objets au total',
+    multiplayerChampionName: 'Champion Multijoueur',
+    multiplayerChampionDesc: 'Gagné un jeu multijoueur',
+    speedsterName: 'Rapide',
+    speedsterDesc: 'Complété un niveau en moins de 10 coups',
+    themeCollectorName: 'Collectionneur de Thèmes',
+    themeCollectorDesc: 'Débloqué un nouveau thème',
+    gemFinderName: 'Chercheur de Gemmes',
+    gemFinderDesc: 'Trouvé 5 gemmes',
+    fishermanName: 'Pêcheur',
+    fishermanDesc: 'Attrapé 5 poissons'
   },
   de: {
     selectLanguage: 'Wähle deine Sprache',
@@ -520,7 +595,32 @@ const TRANSLATIONS = {
     nextLevelStarting: 'Nächstes Level beginnt in...',
     winner: 'GEWINNER!',
     keepPlayingFirstTo10: 'Weiter spielen! Erster zu 10 gewinnt!',
-    playAgain: 'Nochmal Spielen'
+    playAgain: 'Nochmal Spielen',
+    // Achievements
+    firstMatchName: 'Erstes Paar!',
+    firstMatchDesc: 'Erstes Paar gefunden',
+    level5HeroName: 'Level 5 Held',
+    level5HeroDesc: 'Level 5 erreicht',
+    level10MasterName: 'Level 10 Meister',
+    level10MasterDesc: 'Level 10 erreicht',
+    perfectName: 'Perfekt!',
+    perfectDesc: '3 Sterne in einem Level',
+    firstTreasureName: 'Erster Schatz',
+    firstTreasureDesc: 'Erstes Item gesammelt',
+    collectorName: 'Sammler',
+    collectorDesc: '10 Items gesammelt',
+    hoarderName: 'Hamsterer',
+    hoarderDesc: '50 Items gesammelt',
+    multiplayerChampionName: 'Mehrspieler Champion',
+    multiplayerChampionDesc: 'Mehrspieler-Spiel gewonnen',
+    speedsterName: 'Schnelligkeit',
+    speedsterDesc: 'Level in unter 10 Zügen',
+    themeCollectorName: 'Themen-Sammler',
+    themeCollectorDesc: 'Neues Thema freigeschaltet',
+    gemFinderName: 'Edelstein-Finder',
+    gemFinderDesc: '5 Edelsteine gefunden',
+    fishermanName: 'Fischer',
+    fishermanDesc: '5 Fische gefangen'
   },
   it: {
     selectLanguage: 'Seleziona la tua lingua',
@@ -623,7 +723,32 @@ const TRANSLATIONS = {
     nextLevelStarting: 'Prossimo livello inizia tra...',
     winner: 'VINCITORE!',
     keepPlayingFirstTo10: 'Continua a giocare! Il primo a 10 vince!',
-    playAgain: 'Gioca Ancora'
+    playAgain: 'Gioca Ancora',
+    // Achievements
+    firstMatchName: 'Prima Coppia!',
+    firstMatchDesc: 'Fatto la tua prima coppia',
+    level5HeroName: 'Eroe del Livello 5',
+    level5HeroDesc: 'Raggiunto livello 5',
+    level10MasterName: 'Maestro del Livello 10',
+    level10MasterDesc: 'Raggiunto livello 10',
+    perfectName: 'Perfetto!',
+    perfectDesc: 'Ottenuto 3 stelle in un livello',
+    firstTreasureName: 'Primo Tesoro',
+    firstTreasureDesc: 'Raccolto il tuo primo oggetto',
+    collectorName: 'Collezionista',
+    collectorDesc: 'Raccolto 10 oggetti totali',
+    hoarderName: 'Accumulatore',
+    hoarderDesc: 'Raccolto 50 oggetti totali',
+    multiplayerChampionName: 'Campione Multigiocatore',
+    multiplayerChampionDesc: 'Vinto una partita multigiocatore',
+    speedsterName: 'Velocista',
+    speedsterDesc: 'Completato un livello in meno di 10 mosse',
+    themeCollectorName: 'Collezionista di Temi',
+    themeCollectorDesc: 'Sbloccato un nuovo tema',
+    gemFinderName: 'Cercatore di Gemme',
+    gemFinderDesc: 'Trovato 5 gemme',
+    fishermanName: 'Pescatore',
+    fishermanDesc: 'Pescato 5 pesci'
   },
   pt: {
     selectLanguage: 'Selecione seu idioma',
@@ -726,7 +851,32 @@ const TRANSLATIONS = {
     nextLevelStarting: 'Próximo nível começando em...',
     winner: 'VENCEDOR!',
     keepPlayingFirstTo10: 'Continue jogando! Primeiro a chegar a 10 ganha!',
-    playAgain: 'Jogar Novamente'
+    playAgain: 'Jogar Novamente',
+    // Achievements
+    firstMatchName: 'Primeira Combinação!',
+    firstMatchDesc: 'Fez sua primeira combinação',
+    level5HeroName: 'Herói do Nível 5',
+    level5HeroDesc: 'Alcançou o nível 5',
+    level10MasterName: 'Mestre do Nível 10',
+    level10MasterDesc: 'Alcançou o nível 10',
+    perfectName: 'Perfeito!',
+    perfectDesc: 'Conseguiu 3 estrelas em um nível',
+    firstTreasureName: 'Primeiro Tesouro',
+    firstTreasureDesc: 'Coletou seu primeiro item',
+    collectorName: 'Colecionador',
+    collectorDesc: 'Coletou 10 itens no total',
+    hoarderName: 'Acumulador',
+    hoarderDesc: 'Coletou 50 itens no total',
+    multiplayerChampionName: 'Campeão Multijogador',
+    multiplayerChampionDesc: 'Venceu um jogo multijogador',
+    speedsterName: 'Veloz',
+    speedsterDesc: 'Completou um nível em menos de 10 jogadas',
+    themeCollectorName: 'Colecionador de Temas',
+    themeCollectorDesc: 'Desbloqueou um novo tema',
+    gemFinderName: 'Descobridor de Gemas',
+    gemFinderDesc: 'Encontrou 5 gemas',
+    fishermanName: 'Pescador',
+    fishermanDesc: 'Pescou 5 peixes'
   },
   hr: {
     selectLanguage: 'Odaberite jezik',
@@ -829,7 +979,32 @@ const TRANSLATIONS = {
     nextLevelStarting: 'Sljedeća razina počinje za...',
     winner: 'POBJEDNIK!',
     keepPlayingFirstTo10: 'Nastavi igrati! Prvi do 10 pobjeđuje!',
-    playAgain: 'Igraj Ponovno'
+    playAgain: 'Igraj Ponovno',
+    // Achievements
+    firstMatchName: 'Prvi Par!',
+    firstMatchDesc: 'Napravio si prvi par',
+    level5HeroName: 'Heroj 5. Razine',
+    level5HeroDesc: 'Dostigao razinu 5',
+    level10MasterName: 'Majstor 10. Razine',
+    level10MasterDesc: 'Dostigao razinu 10',
+    perfectName: 'Savršeno!',
+    perfectDesc: 'Dobio 3 zvijezde na razini',
+    firstTreasureName: 'Prvo Blago',
+    firstTreasureDesc: 'Prikupio si prvi predmet',
+    collectorName: 'Sakupljač',
+    collectorDesc: 'Prikupio 10 predmeta ukupno',
+    hoarderName: 'Gomilač',
+    hoarderDesc: 'Prikupio 50 predmeta ukupno',
+    multiplayerChampionName: 'Višeigrački Prvak',
+    multiplayerChampionDesc: 'Pobijedio u višeigračkoj igri',
+    speedsterName: 'Brzinac',
+    speedsterDesc: 'Završio razinu u manje od 10 poteza',
+    themeCollectorName: 'Sakupljač Tema',
+    themeCollectorDesc: 'Otključao novu temu',
+    gemFinderName: 'Tražitelj Dragulja',
+    gemFinderDesc: 'Pronašao 5 dragulja',
+    fishermanName: 'Ribar',
+    fishermanDesc: 'Ulovio 5 riba'
   },
   ja: {
     selectLanguage: '言語を選択',
@@ -932,7 +1107,32 @@ const TRANSLATIONS = {
     nextLevelStarting: '次のレベルが始まります...',
     winner: '勝者！',
     keepPlayingFirstTo10: 'プレイを続けよう！最初に10に到達した人が勝ち！',
-    playAgain: 'もう一度プレイ'
+    playAgain: 'もう一度プレイ',
+    // Achievements
+    firstMatchName: '初ペア！',
+    firstMatchDesc: '最初のペアを作った',
+    level5HeroName: 'レベル5ヒーロー',
+    level5HeroDesc: 'レベル5に到達',
+    level10MasterName: 'レベル10マスター',
+    level10MasterDesc: 'レベル10に到達',
+    perfectName: 'パーフェクト！',
+    perfectDesc: 'レベルで3つ星を獲得',
+    firstTreasureName: '最初の宝物',
+    firstTreasureDesc: '最初のアイテムを収集',
+    collectorName: 'コレクター',
+    collectorDesc: '合計10個のアイテムを収集',
+    hoarderName: 'ホーダー',
+    hoarderDesc: '合計50個のアイテムを収集',
+    multiplayerChampionName: 'マルチプレイヤーチャンピオン',
+    multiplayerChampionDesc: 'マルチプレイヤーゲームに勝利',
+    speedsterName: 'スピードスター',
+    speedsterDesc: '10手未満でレベルクリア',
+    themeCollectorName: 'テーマコレクター',
+    themeCollectorDesc: '新しいテーマをアンロック',
+    gemFinderName: 'ジェムファインダー',
+    gemFinderDesc: '5つの宝石を発見',
+    fishermanName: '漁師',
+    fishermanDesc: '5匹の魚を捕獲'
   },
   ko: {
     selectLanguage: '언어 선택',
@@ -1035,7 +1235,32 @@ const TRANSLATIONS = {
     nextLevelStarting: '다음 레벨이 시작됩니다...',
     winner: '승자!',
     keepPlayingFirstTo10: '계속 플레이하세요! 먼저 10에 도달하면 승리합니다!',
-    playAgain: '다시 플레이'
+    playAgain: '다시 플레이',
+    // Achievements
+    firstMatchName: '첫 매치!',
+    firstMatchDesc: '첫 번째 매치를 만들었습니다',
+    level5HeroName: '레벨 5 영웅',
+    level5HeroDesc: '레벨 5 도달',
+    level10MasterName: '레벨 10 마스터',
+    level10MasterDesc: '레벨 10 도달',
+    perfectName: '완벽!',
+    perfectDesc: '레벨에서 별 3개 획득',
+    firstTreasureName: '첫 보물',
+    firstTreasureDesc: '첫 번째 아이템 수집',
+    collectorName: '수집가',
+    collectorDesc: '총 10개 아이템 수집',
+    hoarderName: '저장가',
+    hoarderDesc: '총 50개 아이템 수집',
+    multiplayerChampionName: '멀티플레이어 챔피언',
+    multiplayerChampionDesc: '멀티플레이어 게임 승리',
+    speedsterName: '스피드스터',
+    speedsterDesc: '10회 미만으로 레벨 완료',
+    themeCollectorName: '테마 수집가',
+    themeCollectorDesc: '새로운 테마 잠금 해제',
+    gemFinderName: '보석 탐색가',
+    gemFinderDesc: '5개의 보석 발견',
+    fishermanName: '어부',
+    fishermanDesc: '5마리의 물고기 잡음'
   },
   zh: {
     selectLanguage: '选择语言',
@@ -1138,7 +1363,32 @@ const TRANSLATIONS = {
     nextLevelStarting: '下一关即将开始...',
     winner: '胜利者！',
     keepPlayingFirstTo10: '继续玩！第一个到达10的获胜！',
-    playAgain: '再玩一次'
+    playAgain: '再玩一次',
+    // Achievements
+    firstMatchName: '首次配对！',
+    firstMatchDesc: '完成了你的第一次配对',
+    level5HeroName: '第5关英雄',
+    level5HeroDesc: '达到第5关',
+    level10MasterName: '第10关大师',
+    level10MasterDesc: '达到第10关',
+    perfectName: '完美！',
+    perfectDesc: '在一关获得3颗星',
+    firstTreasureName: '首个宝藏',
+    firstTreasureDesc: '收集了你的第一个物品',
+    collectorName: '收集家',
+    collectorDesc: '总共收集了10个物品',
+    hoarderName: '囤积者',
+    hoarderDesc: '总共收集了50个物品',
+    multiplayerChampionName: '多人游戏冠军',
+    multiplayerChampionDesc: '赢得了多人游戏',
+    speedsterName: '速度之星',
+    speedsterDesc: '在10步内完成一关',
+    themeCollectorName: '主题收集家',
+    themeCollectorDesc: '解锁了新主题',
+    gemFinderName: '宝石寻找者',
+    gemFinderDesc: '发现了5颗宝石',
+    fishermanName: '渔夫',
+    fishermanDesc: '捕获了5条鱼'
   }
 }
 
@@ -1270,26 +1520,27 @@ export default function MemoryGame() {
   const audioContextRef = useRef(null)
 
   // Define all possible achievements
-  const ALL_BADGES = {
-    firstMatch: { id: 'firstMatch', name: 'First Match!', emoji: '🎯', description: 'Made your first match' },
-    level5: { id: 'level5', name: 'Level 5 Hero', emoji: '⭐', description: 'Reached level 5' },
-    level10: { id: 'level10', name: 'Level 10 Master', emoji: '🏆', description: 'Reached level 10' },
-    perfectLevel: { id: 'perfectLevel', name: 'Perfect!', emoji: '✨', description: 'Got 3 stars on a level' },
-    firstItem: { id: 'firstItem', name: 'First Treasure', emoji: '💎', description: 'Collected your first item' },
-    collector: { id: 'collector', name: 'Collector', emoji: '🎒', description: 'Collected 10 total items' },
-    hoarder: { id: 'hoarder', name: 'Hoarder', emoji: '👑', description: 'Collected 50 total items' },
-    multiplayerWin: { id: 'multiplayerWin', name: 'Multiplayer Champion', emoji: '🎮', description: 'Won a multiplayer game' },
-    speedster: { id: 'speedster', name: 'Speedster', emoji: '⚡', description: 'Completed a level in under 10 moves' },
-    unlockTheme: { id: 'unlockTheme', name: 'Theme Collector', emoji: '🎨', description: 'Unlocked a new theme' },
-    gemFinder: { id: 'gemFinder', name: 'Gem Finder', emoji: '💍', description: 'Found 5 gems' },
-    fisherman: { id: 'fisherman', name: 'Fisherman', emoji: '🎣', description: 'Caught 5 fish' }
-  }
+  // Function to get translated badges
+  const getAllBadges = () => ({
+    firstMatch: { id: 'firstMatch', name: t('firstMatchName'), emoji: '🎯', description: t('firstMatchDesc') },
+    level5: { id: 'level5', name: t('level5HeroName'), emoji: '⭐', description: t('level5HeroDesc') },
+    level10: { id: 'level10', name: t('level10MasterName'), emoji: '🏆', description: t('level10MasterDesc') },
+    perfectLevel: { id: 'perfectLevel', name: t('perfectName'), emoji: '✨', description: t('perfectDesc') },
+    firstItem: { id: 'firstItem', name: t('firstTreasureName'), emoji: '💎', description: t('firstTreasureDesc') },
+    collector: { id: 'collector', name: t('collectorName'), emoji: '🎒', description: t('collectorDesc') },
+    hoarder: { id: 'hoarder', name: t('hoarderName'), emoji: '👑', description: t('hoarderDesc') },
+    multiplayerWin: { id: 'multiplayerWin', name: t('multiplayerChampionName'), emoji: '🎮', description: t('multiplayerChampionDesc') },
+    speedster: { id: 'speedster', name: t('speedsterName'), emoji: '⚡', description: t('speedsterDesc') },
+    unlockTheme: { id: 'unlockTheme', name: t('themeCollectorName'), emoji: '🎨', description: t('themeCollectorDesc') },
+    gemFinder: { id: 'gemFinder', name: t('gemFinderName'), emoji: '💍', description: t('gemFinderDesc') },
+    fisherman: { id: 'fisherman', name: t('fishermanName'), emoji: '🎣', description: t('fishermanDesc') }
+  })
 
   // Award badge function
   const awardBadge = (badgeId) => {
     if (!achievements.includes(badgeId)) {
       setAchievements(prev => [...prev, badgeId])
-      setEarnedBadge(ALL_BADGES[badgeId])
+      setEarnedBadge(getAllBadges()[badgeId])
       setShowBadgeEarned(true)
       playSound('badge', 0.5)
 
@@ -2841,7 +3092,7 @@ export default function MemoryGame() {
           <div className="bg-gradient-to-br from-purple-100 via-pink-100 to-blue-100 rounded-3xl p-8 max-w-2xl w-full mx-4 shadow-2xl border-4 border-purple-600">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-4xl font-bold text-purple-900 flex items-center gap-2">
-                🏆 Achievements ({achievements.length}/{Object.keys(ALL_BADGES).length})
+                🏆 {t('achievements')} ({achievements.length}/{Object.keys(getAllBadges()).length})
               </h2>
               <button
                 onClick={() => setShowBadges(false)}
@@ -2852,7 +3103,7 @@ export default function MemoryGame() {
             </div>
 
             <div className="grid grid-cols-2 gap-4 max-h-96 overflow-y-auto">
-              {Object.values(ALL_BADGES).map(badge => {
+              {Object.values(getAllBadges()).map(badge => {
                 const isEarned = achievements.includes(badge.id)
                 return (
                   <div
