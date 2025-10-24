@@ -236,7 +236,21 @@ const TRANSLATIONS = {
     gemFinderName: 'Gem Finder',
     gemFinderDesc: 'Found 5 gems',
     fishermanName: 'Fisherman',
-    fishermanDesc: 'Caught 5 fish'
+    fishermanDesc: 'Caught 5 fish',
+    // Backpack Items
+    apple: 'Apple',
+    apples: 'Apples',
+    berries: 'Berries',
+    fish: 'Fish',
+    fishes: 'Fish',
+    gem: 'Gem',
+    gems: 'Gems',
+    treasure: 'Treasure',
+    treasures: 'Treasures',
+    mysteryBox: 'Mystery Box',
+    mysteryBoxes: 'Mystery Boxes',
+    collectRareItems: 'Collect rare items by matching cards perfectly!',
+    locked: 'Locked'
   },
   es: {
     selectLanguage: 'Selecciona tu idioma',
@@ -364,7 +378,21 @@ const TRANSLATIONS = {
     gemFinderName: 'Buscador de Gemas',
     gemFinderDesc: 'Encontraste 5 gemas',
     fishermanName: 'Pescador',
-    fishermanDesc: 'Pescaste 5 peces'
+    fishermanDesc: 'Pescaste 5 peces',
+    // Backpack Items
+    apple: 'Manzana',
+    apples: 'Manzanas',
+    berries: 'Bayas',
+    fish: 'Pez',
+    fishes: 'Peces',
+    gem: 'Gema',
+    gems: 'Gemas',
+    treasure: 'Tesoro',
+    treasures: 'Tesoros',
+    mysteryBox: 'Caja Misteriosa',
+    mysteryBoxes: 'Cajas Misteriosas',
+    collectRareItems: '¡Colecciona objetos raros haciendo coincidir cartas perfectamente!',
+    locked: 'Bloqueado'
   },
   fr: {
     selectLanguage: 'Sélectionnez votre langue',
@@ -492,7 +520,21 @@ const TRANSLATIONS = {
     gemFinderName: 'Chercheur de Gemmes',
     gemFinderDesc: 'Trouvé 5 gemmes',
     fishermanName: 'Pêcheur',
-    fishermanDesc: 'Attrapé 5 poissons'
+    fishermanDesc: 'Attrapé 5 poissons',
+    // Backpack Items
+    apple: 'Pomme',
+    apples: 'Pommes',
+    berries: 'Baies',
+    fish: 'Poisson',
+    fishes: 'Poissons',
+    gem: 'Gemme',
+    gems: 'Gemmes',
+    treasure: 'Trésor',
+    treasures: 'Trésors',
+    mysteryBox: 'Boîte Mystère',
+    mysteryBoxes: 'Boîtes Mystère',
+    collectRareItems: 'Collectez des objets rares en faisant correspondre les cartes parfaitement!',
+    locked: 'Verrouillé'
   },
   de: {
     selectLanguage: 'Wähle deine Sprache',
@@ -620,7 +662,21 @@ const TRANSLATIONS = {
     gemFinderName: 'Edelstein-Finder',
     gemFinderDesc: '5 Edelsteine gefunden',
     fishermanName: 'Fischer',
-    fishermanDesc: '5 Fische gefangen'
+    fishermanDesc: '5 Fische gefangen',
+    // Backpack Items
+    apple: 'Apfel',
+    apples: 'Äpfel',
+    berries: 'Beeren',
+    fish: 'Fisch',
+    fishes: 'Fische',
+    gem: 'Edelstein',
+    gems: 'Edelsteine',
+    treasure: 'Schatz',
+    treasures: 'Schätze',
+    mysteryBox: 'Mysterienbox',
+    mysteryBoxes: 'Mysterienboxen',
+    collectRareItems: 'Sammle seltene Gegenstände, indem du Karten perfekt zusammenbringst!',
+    locked: 'Gesperrt'
   },
   it: {
     selectLanguage: 'Seleziona la tua lingua',
@@ -748,7 +804,21 @@ const TRANSLATIONS = {
     gemFinderName: 'Cercatore di Gemme',
     gemFinderDesc: 'Trovato 5 gemme',
     fishermanName: 'Pescatore',
-    fishermanDesc: 'Pescato 5 pesci'
+    fishermanDesc: 'Pescato 5 pesci',
+    // Backpack Items
+    apple: 'Mela',
+    apples: 'Mele',
+    berries: 'Bacche',
+    fish: 'Pesce',
+    fishes: 'Pesci',
+    gem: 'Gemma',
+    gems: 'Gemme',
+    treasure: 'Tesoro',
+    treasures: 'Tesori',
+    mysteryBox: 'Scatola Misteriosa',
+    mysteryBoxes: 'Scatole Misteriose',
+    collectRareItems: 'Raccogli oggetti rari abbinando le carte perfettamente!',
+    locked: 'Bloccato'
   },
   pt: {
     selectLanguage: 'Selecione seu idioma',
@@ -876,7 +946,21 @@ const TRANSLATIONS = {
     gemFinderName: 'Descobridor de Gemas',
     gemFinderDesc: 'Encontrou 5 gemas',
     fishermanName: 'Pescador',
-    fishermanDesc: 'Pescou 5 peixes'
+    fishermanDesc: 'Pescou 5 peixes',
+    // Backpack Items
+    apple: 'Maçã',
+    apples: 'Maçãs',
+    berries: 'Frutas Silvestres',
+    fish: 'Peixe',
+    fishes: 'Peixes',
+    gem: 'Gema',
+    gems: 'Gemas',
+    treasure: 'Tesouro',
+    treasures: 'Tesouros',
+    mysteryBox: 'Caixa Misteriosa',
+    mysteryBoxes: 'Caixas Misteriosas',
+    collectRareItems: 'Colete itens raros combinando cartas perfeitamente!',
+    locked: 'Bloqueado'
   },
   hr: {
     selectLanguage: 'Odaberite jezik',
@@ -1004,7 +1088,21 @@ const TRANSLATIONS = {
     gemFinderName: 'Tražitelj Dragulja',
     gemFinderDesc: 'Pronašao 5 dragulja',
     fishermanName: 'Ribar',
-    fishermanDesc: 'Ulovio 5 riba'
+    fishermanDesc: 'Ulovio 5 riba',
+    // Backpack Items
+    apple: 'Jabuka',
+    apples: 'Jabuke',
+    berries: 'Bobice',
+    fish: 'Riba',
+    fishes: 'Ribe',
+    gem: 'Dragulj',
+    gems: 'Dragulji',
+    treasure: 'Blago',
+    treasures: 'Blaga',
+    mysteryBox: 'Tajanstvena Kutija',
+    mysteryBoxes: 'Tajanstvene Kutije',
+    collectRareItems: 'Prikupi rijetke predmete spajanjem kartica savršeno!',
+    locked: 'Zaključano'
   },
   ja: {
     selectLanguage: '言語を選択',
@@ -1132,7 +1230,21 @@ const TRANSLATIONS = {
     gemFinderName: 'ジェムファインダー',
     gemFinderDesc: '5つの宝石を発見',
     fishermanName: '漁師',
-    fishermanDesc: '5匹の魚を捕獲'
+    fishermanDesc: '5匹の魚を捕獲',
+    // Backpack Items
+    apple: 'リンゴ',
+    apples: 'リンゴ',
+    berries: 'ベリー',
+    fish: '魚',
+    fishes: '魚',
+    gem: '宝石',
+    gems: '宝石',
+    treasure: '宝物',
+    treasures: '宝物',
+    mysteryBox: 'ミステリーボックス',
+    mysteryBoxes: 'ミステリーボックス',
+    collectRareItems: 'カードを完璧にマッチさせてレアアイテムを収集しよう！',
+    locked: 'ロック済み'
   },
   ko: {
     selectLanguage: '언어 선택',
@@ -1260,7 +1372,21 @@ const TRANSLATIONS = {
     gemFinderName: '보석 탐색가',
     gemFinderDesc: '5개의 보석 발견',
     fishermanName: '어부',
-    fishermanDesc: '5마리의 물고기 잡음'
+    fishermanDesc: '5마리의 물고기 잡음',
+    // Backpack Items
+    apple: '사과',
+    apples: '사과',
+    berries: '베리',
+    fish: '물고기',
+    fishes: '물고기',
+    gem: '보석',
+    gems: '보석',
+    treasure: '보물',
+    treasures: '보물',
+    mysteryBox: '미스터리 박스',
+    mysteryBoxes: '미스터리 박스',
+    collectRareItems: '카드를 완벽하게 매치하여 희귀 아이템을 수집하세요!',
+    locked: '잠김'
   },
   zh: {
     selectLanguage: '选择语言',
@@ -1388,7 +1514,21 @@ const TRANSLATIONS = {
     gemFinderName: '宝石寻找者',
     gemFinderDesc: '发现了5颗宝石',
     fishermanName: '渔夫',
-    fishermanDesc: '捕获了5条鱼'
+    fishermanDesc: '捕获了5条鱼',
+    // Backpack Items
+    apple: '苹果',
+    apples: '苹果',
+    berries: '浆果',
+    fish: '鱼',
+    fishes: '鱼',
+    gem: '宝石',
+    gems: '宝石',
+    treasure: '宝藏',
+    treasures: '宝藏',
+    mysteryBox: '神秘盒子',
+    mysteryBoxes: '神秘盒子',
+    collectRareItems: '通过完美匹配卡片收集稀有物品！',
+    locked: '已锁定'
   }
 }
 
@@ -2014,12 +2154,12 @@ export default function MemoryGame() {
         const isPerfectMatch = Math.random() < 0.05 // Only 5% chance for reward!
         if (isPerfectMatch && gameMode === 'single') {
           const itemTypes = [
-            { key: 'apples', emoji: '🍎', name: 'Apple' },
-            { key: 'berries', emoji: '🫐', name: 'Berries' },
-            { key: 'fish', emoji: '🐟', name: 'Fish' },
-            { key: 'gems', emoji: '💎', name: 'Gem' },
-            { key: 'treasures', emoji: '🏺', name: 'Treasure' },
-            { key: 'mystery', emoji: '🎁', name: 'Mystery Box' }
+            { key: 'apples', emoji: '🍎', name: t('apple') },
+            { key: 'berries', emoji: '🫐', name: t('berries') },
+            { key: 'fish', emoji: '🐟', name: t('fish') },
+            { key: 'gems', emoji: '💎', name: t('gem') },
+            { key: 'treasures', emoji: '🏺', name: t('treasure') },
+            { key: 'mystery', emoji: '🎁', name: t('mysteryBox') }
           ]
           const randomItem = itemTypes[Math.floor(Math.random() * itemTypes.length)]
 
@@ -3057,12 +3197,12 @@ export default function MemoryGame() {
 
             <div className="grid grid-cols-3 gap-4">
               {[
-                { key: 'apples', emoji: '🍎', name: 'Apples' },
-                { key: 'berries', emoji: '🫐', name: 'Berries' },
-                { key: 'fish', emoji: '🐟', name: 'Fish' },
-                { key: 'gems', emoji: '💎', name: 'Gems' },
-                { key: 'treasures', emoji: '🏺', name: 'Treasures' },
-                { key: 'mystery', emoji: '🎁', name: 'Mystery Boxes' }
+                { key: 'apples', emoji: '🍎', name: t('apples') },
+                { key: 'berries', emoji: '🫐', name: t('berries') },
+                { key: 'fish', emoji: '🐟', name: t('fishes') },
+                { key: 'gems', emoji: '💎', name: t('gems') },
+                { key: 'treasures', emoji: '🏺', name: t('treasures') },
+                { key: 'mystery', emoji: '🎁', name: t('mysteryBoxes') }
               ].map(item => (
                 <div
                   key={item.key}
@@ -3079,7 +3219,7 @@ export default function MemoryGame() {
 
             <div className="mt-6 text-center">
               <p className="text-amber-800 text-sm">
-                💡 Collect rare items by matching cards perfectly!
+                💡 {t('collectRareItems')}
               </p>
             </div>
           </div>
@@ -3124,7 +3264,7 @@ export default function MemoryGame() {
                       {badge.description}
                     </p>
                     {!isEarned && (
-                      <p className="text-xs text-gray-600 mt-1">🔒 Locked</p>
+                      <p className="text-xs text-gray-600 mt-1">🔒 {t('locked')}</p>
                     )}
                   </div>
                 )
