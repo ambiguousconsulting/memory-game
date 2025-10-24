@@ -197,7 +197,21 @@ const TRANSLATIONS = {
     natureGreen: 'Nature Green',
     sunnyOrange: 'Sunny Orange',
     cherryRed: 'Cherry Red',
-    rainbowMagic: 'Rainbow Magic'
+    rainbowMagic: 'Rainbow Magic',
+    playerNames: 'Player Names',
+    dontPutRealName: "Don't put your real name!",
+    highestLevelCompleted: 'Highest Level Completed:',
+    readyToStart: 'Ready to start your journey! Complete levels to unlock new content.',
+    checkSettings: 'Check Settings to use them!',
+    startOverLevel1: 'Start Over at Level 1?',
+    noWorries: 'No worries! Your unlocks are safe! 😊',
+    round: 'Round',
+    cardsFindMatches: 'cards - Find matches to score points!',
+    youCompleted: 'You completed',
+    nextLevelStarting: 'Next level starting in...',
+    winner: 'WINNER!',
+    keepPlayingFirstTo10: 'Keep playing! First to 10 wins!',
+    playAgain: 'Play Again'
   },
   es: {
     selectLanguage: 'Selecciona tu idioma',
@@ -286,7 +300,21 @@ const TRANSLATIONS = {
     natureGreen: 'Verde Naturaleza',
     sunnyOrange: 'Naranja Soleado',
     cherryRed: 'Rojo Cereza',
-    rainbowMagic: 'Magia Arcoíris'
+    rainbowMagic: 'Magia Arcoíris',
+    playerNames: 'Nombres de Jugadores',
+    dontPutRealName: '¡No pongas tu nombre real!',
+    highestLevelCompleted: 'Nivel más alto completado:',
+    readyToStart: '¡Listo para comenzar tu aventura! Completa niveles para desbloquear nuevo contenido.',
+    checkSettings: '¡Revisa Configuración para usarlos!',
+    startOverLevel1: '¿Comenzar de nuevo en el Nivel 1?',
+    noWorries: '¡No te preocupes! ¡Tus desbloqueos están a salvo! 😊',
+    round: 'Ronda',
+    cardsFindMatches: 'cartas - ¡Encuentra parejas para ganar puntos!',
+    youCompleted: 'Completaste',
+    nextLevelStarting: 'Siguiente nivel comenzando en...',
+    winner: '¡GANADOR!',
+    keepPlayingFirstTo10: '¡Sigue jugando! ¡El primero en llegar a 10 gana!',
+    playAgain: 'Jugar de Nuevo'
   },
   fr: {
     selectLanguage: 'Sélectionnez votre langue',
@@ -375,7 +403,21 @@ const TRANSLATIONS = {
     natureGreen: 'Vert Nature',
     sunnyOrange: 'Orange Ensoleillé',
     cherryRed: 'Rouge Cerise',
-    rainbowMagic: 'Magie Arc-en-ciel'
+    rainbowMagic: 'Magie Arc-en-ciel',
+    playerNames: 'Noms des Joueurs',
+    dontPutRealName: 'Ne mettez pas votre vrai nom!',
+    highestLevelCompleted: 'Niveau le plus élevé complété:',
+    readyToStart: 'Prêt à commencer votre voyage! Complétez des niveaux pour débloquer du nouveau contenu.',
+    checkSettings: 'Vérifiez les Paramètres pour les utiliser!',
+    startOverLevel1: 'Recommencer au Niveau 1?',
+    noWorries: 'Pas de souci! Vos déblocages sont en sécurité! 😊',
+    round: 'Tour',
+    cardsFindMatches: 'cartes - Trouvez des paires pour marquer des points!',
+    youCompleted: 'Vous avez terminé',
+    nextLevelStarting: 'Prochain niveau commence dans...',
+    winner: 'GAGNANT!',
+    keepPlayingFirstTo10: 'Continuez à jouer! Le premier à 10 gagne!',
+    playAgain: 'Rejouer'
   },
   de: {
     selectLanguage: 'Wähle deine Sprache',
@@ -464,7 +506,21 @@ const TRANSLATIONS = {
     natureGreen: 'Natur Grün',
     sunnyOrange: 'Sonniges Orange',
     cherryRed: 'Kirsch Rot',
-    rainbowMagic: 'Regenbogen Magie'
+    rainbowMagic: 'Regenbogen Magie',
+    playerNames: 'Spielernamen',
+    dontPutRealName: 'Gib nicht deinen echten Namen ein!',
+    highestLevelCompleted: 'Höchstes abgeschlossenes Level:',
+    readyToStart: 'Bereit, deine Reise zu beginnen! Schließe Level ab, um neue Inhalte freizuschalten.',
+    checkSettings: 'Überprüfen Sie die Einstellungen, um sie zu verwenden!',
+    startOverLevel1: 'Neustart bei Level 1?',
+    noWorries: 'Keine Sorge! Deine Freischaltungen sind sicher! 😊',
+    round: 'Runde',
+    cardsFindMatches: 'Karten - Finde Paare, um Punkte zu sammeln!',
+    youCompleted: 'Du hast abgeschlossen',
+    nextLevelStarting: 'Nächstes Level beginnt in...',
+    winner: 'GEWINNER!',
+    keepPlayingFirstTo10: 'Weiter spielen! Erster zu 10 gewinnt!',
+    playAgain: 'Nochmal Spielen'
   },
   it: {
     selectLanguage: 'Seleziona la tua lingua',
@@ -553,7 +609,21 @@ const TRANSLATIONS = {
     natureGreen: 'Verde Natura',
     sunnyOrange: 'Arancione Soleggiato',
     cherryRed: 'Rosso Ciliegia',
-    rainbowMagic: 'Magia Arcobaleno'
+    rainbowMagic: 'Magia Arcobaleno',
+    playerNames: 'Nomi Giocatori',
+    dontPutRealName: 'Non mettere il tuo vero nome!',
+    highestLevelCompleted: 'Livello più alto completato:',
+    readyToStart: 'Pronto a iniziare il tuo viaggio! Completa i livelli per sbloccare nuovi contenuti.',
+    checkSettings: 'Controlla le Impostazioni per usarli!',
+    startOverLevel1: 'Ricominciare dal Livello 1?',
+    noWorries: 'Nessun problema! I tuoi sblocchi sono al sicuro! 😊',
+    round: 'Round',
+    cardsFindMatches: 'carte - Trova coppie per segnare punti!',
+    youCompleted: 'Hai completato',
+    nextLevelStarting: 'Prossimo livello inizia tra...',
+    winner: 'VINCITORE!',
+    keepPlayingFirstTo10: 'Continua a giocare! Il primo a 10 vince!',
+    playAgain: 'Gioca Ancora'
   },
   pt: {
     selectLanguage: 'Selecione seu idioma',
@@ -642,7 +712,21 @@ const TRANSLATIONS = {
     natureGreen: 'Verde Natureza',
     sunnyOrange: 'Laranja Ensolarado',
     cherryRed: 'Vermelho Cereja',
-    rainbowMagic: 'Magia Arco-Íris'
+    rainbowMagic: 'Magia Arco-Íris',
+    playerNames: 'Nomes dos Jogadores',
+    dontPutRealName: 'Não coloque seu nome real!',
+    highestLevelCompleted: 'Nível mais alto completado:',
+    readyToStart: 'Pronto para começar sua jornada! Complete níveis para desbloquear novo conteúdo.',
+    checkSettings: 'Verifique as Configurações para usá-los!',
+    startOverLevel1: 'Recomeçar no Nível 1?',
+    noWorries: 'Sem problemas! Seus desbloqueios estão seguros! 😊',
+    round: 'Rodada',
+    cardsFindMatches: 'cartas - Encontre pares para marcar pontos!',
+    youCompleted: 'Você completou',
+    nextLevelStarting: 'Próximo nível começando em...',
+    winner: 'VENCEDOR!',
+    keepPlayingFirstTo10: 'Continue jogando! Primeiro a chegar a 10 ganha!',
+    playAgain: 'Jogar Novamente'
   },
   hr: {
     selectLanguage: 'Odaberite jezik',
@@ -731,7 +815,21 @@ const TRANSLATIONS = {
     natureGreen: 'Prirodna Zelena',
     sunnyOrange: 'Sunčana Narančasta',
     cherryRed: 'Trešnja Crvena',
-    rainbowMagic: 'Dužična Čarolija'
+    rainbowMagic: 'Dužična Čarolija',
+    playerNames: 'Imena Igrača',
+    dontPutRealName: 'Nemoj pisati svoje pravo ime!',
+    highestLevelCompleted: 'Najviša završena razina:',
+    readyToStart: 'Spreman za početak putovanja! Završi razine da otključaš novi sadržaj.',
+    checkSettings: 'Provjeri Postavke da ih koristiš!',
+    startOverLevel1: 'Početi ispočetka na Razini 1?',
+    noWorries: 'Nema brige! Tvoja otključavanja su sigurna! 😊',
+    round: 'Runda',
+    cardsFindMatches: 'kartice - Pronađi parove da osvojiš bodove!',
+    youCompleted: 'Završio si',
+    nextLevelStarting: 'Sljedeća razina počinje za...',
+    winner: 'POBJEDNIK!',
+    keepPlayingFirstTo10: 'Nastavi igrati! Prvi do 10 pobjeđuje!',
+    playAgain: 'Igraj Ponovno'
   },
   ja: {
     selectLanguage: '言語を選択',
@@ -820,7 +918,21 @@ const TRANSLATIONS = {
     natureGreen: 'ネイチャーグリーン',
     sunnyOrange: 'サニーオレンジ',
     cherryRed: 'チェリーレッド',
-    rainbowMagic: 'レインボーマジック'
+    rainbowMagic: 'レインボーマジック',
+    playerNames: 'プレイヤー名',
+    dontPutRealName: '本名を入力しないでください！',
+    highestLevelCompleted: '最高完了レベル：',
+    readyToStart: '冒険を始める準備ができました！レベルをクリアして新しいコンテンツをアンロックしましょう。',
+    checkSettings: '設定を確認して使用してください！',
+    startOverLevel1: 'レベル1からやり直しますか？',
+    noWorries: '心配しないで！アンロックは安全です！😊',
+    round: 'ラウンド',
+    cardsFindMatches: '枚のカード - ペアを見つけてポイントを獲得！',
+    youCompleted: 'クリアしました',
+    nextLevelStarting: '次のレベルが始まります...',
+    winner: '勝者！',
+    keepPlayingFirstTo10: 'プレイを続けよう！最初に10に到達した人が勝ち！',
+    playAgain: 'もう一度プレイ'
   },
   ko: {
     selectLanguage: '언어 선택',
@@ -909,7 +1021,21 @@ const TRANSLATIONS = {
     natureGreen: '네이처 그린',
     sunnyOrange: '써니 오렌지',
     cherryRed: '체리 레드',
-    rainbowMagic: '레인보우 매직'
+    rainbowMagic: '레인보우 매직',
+    playerNames: '플레이어 이름',
+    dontPutRealName: '실명을 입력하지 마세요!',
+    highestLevelCompleted: '최고 완료 레벨:',
+    readyToStart: '여정을 시작할 준비가 되었습니다! 레벨을 완료하여 새로운 콘텐츠를 잠금 해제하세요.',
+    checkSettings: '설정을 확인하여 사용하세요!',
+    startOverLevel1: '레벨 1부터 다시 시작하시겠습니까?',
+    noWorries: '걱정 마세요! 잠금 해제는 안전합니다! 😊',
+    round: '라운드',
+    cardsFindMatches: '장의 카드 - 쌍을 찾아 점수를 획득하세요!',
+    youCompleted: '완료했습니다',
+    nextLevelStarting: '다음 레벨이 시작됩니다...',
+    winner: '승자!',
+    keepPlayingFirstTo10: '계속 플레이하세요! 먼저 10에 도달하면 승리합니다!',
+    playAgain: '다시 플레이'
   },
   zh: {
     selectLanguage: '选择语言',
@@ -998,7 +1124,21 @@ const TRANSLATIONS = {
     natureGreen: '自然绿',
     sunnyOrange: '阳光橙',
     cherryRed: '樱桃红',
-    rainbowMagic: '彩虹魔法'
+    rainbowMagic: '彩虹魔法',
+    playerNames: '玩家名称',
+    dontPutRealName: '不要输入真实姓名！',
+    highestLevelCompleted: '最高完成关卡：',
+    readyToStart: '准备开始你的旅程！完成关卡以解锁新内容。',
+    checkSettings: '查看设置以使用它们！',
+    startOverLevel1: '从第1关重新开始？',
+    noWorries: '不用担心！你的解锁是安全的！😊',
+    round: '回合',
+    cardsFindMatches: '张卡片 - 找到配对以得分！',
+    youCompleted: '你完成了',
+    nextLevelStarting: '下一关即将开始...',
+    winner: '胜利者！',
+    keepPlayingFirstTo10: '继续玩！第一个到达10的获胜！',
+    playAgain: '再玩一次'
   }
 }
 
@@ -2441,8 +2581,8 @@ export default function MemoryGame() {
                 
                 {/* Player Name Inputs */}
                 <div className="mb-6 space-y-2">
-                  <p className="text-black text-lg font-bold mb-2">Player Names</p>
-                  <p className="text-base mb-3">⚠️ <span className="text-black">Don&apos;t put your real name!</span></p>
+                  <p className="text-black text-lg font-bold mb-2">{t('playerNames')}</p>
+                  <p className="text-base mb-3">⚠️ <span className="text-black">{t('dontPutRealName')}</span></p>
                   {Array.from({length: numPlayers}, (_, i) => i + 1).map(playerNum => (
                     <input
                       key={playerNum}
@@ -2477,9 +2617,9 @@ export default function MemoryGame() {
           <div className="text-center bg-white bg-opacity-20 rounded-xl p-4 backdrop-blur-sm">
             <h3 className="text-black text-lg font-bold mb-2">🏆 {t('yourProgress')}</h3>
             {highestLevelCompleted > 0 ? (
-              <p className="text-black text-sm mb-2">Highest Level Completed: {highestLevelCompleted}</p>
+              <p className="text-black text-sm mb-2">{t('highestLevelCompleted')} {highestLevelCompleted}</p>
             ) : (
-              <p className="text-black text-sm mb-2">Ready to start your journey! Complete levels to unlock new content.</p>
+              <p className="text-black text-sm mb-2">{t('readyToStart')}</p>
             )}
 
             {/* Show next unlocks */}
@@ -2621,7 +2761,7 @@ export default function MemoryGame() {
                 </div>
               ))}
             </div>
-            <p className="text-gray-600 mt-4 text-sm">Check Settings to use them!</p>
+            <p className="text-gray-600 mt-4 text-sm">{t('checkSettings')}</p>
           </div>
         </div>
       )}
@@ -2754,8 +2894,8 @@ export default function MemoryGame() {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999]">
           <div className="bg-gradient-to-br from-yellow-300 via-pink-300 to-purple-400 rounded-3xl p-8 max-w-md text-center shadow-2xl border-4 border-white">
             <div className="text-6xl mb-4">🏠</div>
-            <h2 className="text-3xl font-bold text-purple-800 mb-4">Start Over at Level 1?</h2>
-            <p className="text-xl text-purple-700 mb-6">No worries! Your unlocks are safe! 😊</p>
+            <h2 className="text-3xl font-bold text-purple-800 mb-4">{t('startOverLevel1')}</h2>
+            <p className="text-xl text-purple-700 mb-6">{t('noWorries')}</p>
             <div className="flex gap-4 justify-center">
               <button
                 onClick={() => {
@@ -2877,8 +3017,8 @@ export default function MemoryGame() {
           {gameMode === 'multiplayer' && (
             <div className="mb-2">
               <div className="text-center mb-2">
-                <h2 className="text-lg font-bold text-black">🏆 First to 10 Points Wins! 🏆</h2>
-                <p className="text-yellow-200 text-sm">Round {currentLevel}: {totalCards} cards - Find matches to score points!</p>
+                <h2 className="text-lg font-bold text-black">🏆 {t('firstTo10Wins')} 🏆</h2>
+                <p className="text-yellow-200 text-sm">{t('round')} {currentLevel}: {totalCards} {t('cardsFindMatches')}</p>
               </div>
               <div className="flex flex-col items-center gap-4">
                 {/* Current Turn Display */}
@@ -2930,18 +3070,18 @@ export default function MemoryGame() {
               <h2 className="text-4xl font-bold text-yellow-300 animate-bounce mb-2">🎉 {currentLevelConfig.encouragement} 🎉</h2>
               {gameMode === 'single' && (
                 <div>
-                  <p className="text-white text-2xl font-bold mb-2">You completed {currentLevelConfig.name}!</p>
+                  <p className="text-white text-2xl font-bold mb-2">{t('youCompleted')} {translateLevelName(currentLevelConfig.name)}!</p>
                   <div className="text-6xl mb-2">⭐ ⭐ ⭐</div>
                 </div>
               )}
               {gameMode === 'multiplayer' && !gameWinner && (
                 <p className="text-white text-xl">
-                  🎯 Keep playing! First to 10 wins!
+                  🎯 {t('keepPlayingFirstTo10')}
                 </p>
               )}
               {countdown && (
                 <div className="text-center mt-4">
-                  <p className="text-white text-2xl font-bold mb-2">Next level starting in...</p>
+                  <p className="text-white text-2xl font-bold mb-2">{t('nextLevelStarting')}</p>
                   <div className="text-8xl font-black text-yellow-300 animate-pulse">
                     {countdown}
                   </div>
@@ -2952,7 +3092,7 @@ export default function MemoryGame() {
           
           {gameWinner && gameMode === 'multiplayer' && (
             <div className="text-center mt-2">
-              <h2 className="text-3xl font-bold text-yellow-300 animate-bounce mb-4">🏆 WINNER! 🏆</h2>
+              <h2 className="text-3xl font-bold text-yellow-300 animate-bounce mb-4">🏆 {t('winner')} 🏆</h2>
               <p className="text-white text-xl mb-2">
                 {gameWinner === 'tie' ? t('tie') : `${playerNames[gameWinner] || `${t('player')} ${gameWinner}`} ${t('reachedTenPointsFirst')}`}
               </p>
@@ -2964,7 +3104,7 @@ export default function MemoryGame() {
                   onClick={startMultiplayer}
                   className="mt-2 bg-yellow-400 text-purple-600 font-bold py-2 px-6 rounded-xl text-lg hover:bg-yellow-300 transition-colors transform hover:scale-105"
                 >
-                  🎮 Play Again ({numPlayers} Players)
+                  🎮 {t('playAgain')} ({numPlayers} {t('players')})
                 </button>
                 <button
                   onClick={() => {
