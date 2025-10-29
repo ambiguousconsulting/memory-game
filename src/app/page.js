@@ -250,7 +250,9 @@ const TRANSLATIONS = {
     mysteryBox: 'Mystery Box',
     mysteryBoxes: 'Mystery Boxes',
     collectRareItems: 'Collect rare items by matching cards perfectly!',
-    locked: 'Locked'
+    locked: 'Locked',
+    // Unlock descriptions
+    completeLevelToUnlock: 'Complete Level {level} to unlock!'
   },
   es: {
     selectLanguage: 'Selecciona tu idioma',
@@ -392,7 +394,9 @@ const TRANSLATIONS = {
     mysteryBox: 'Caja Misteriosa',
     mysteryBoxes: 'Cajas Misteriosas',
     collectRareItems: '¡Colecciona objetos raros haciendo coincidir cartas perfectamente!',
-    locked: 'Bloqueado'
+    locked: 'Bloqueado',
+    // Unlock descriptions
+    completeLevelToUnlock: '¡Completa el Nivel {level} para desbloquear!'
   },
   fr: {
     selectLanguage: 'Sélectionnez votre langue',
@@ -534,7 +538,9 @@ const TRANSLATIONS = {
     mysteryBox: 'Boîte Mystère',
     mysteryBoxes: 'Boîtes Mystère',
     collectRareItems: 'Collectez des objets rares en faisant correspondre les cartes parfaitement!',
-    locked: 'Verrouillé'
+    locked: 'Verrouillé',
+    // Unlock descriptions
+    completeLevelToUnlock: 'Terminez le Niveau {level} pour débloquer!'
   },
   de: {
     selectLanguage: 'Wähle deine Sprache',
@@ -676,7 +682,9 @@ const TRANSLATIONS = {
     mysteryBox: 'Mysterienbox',
     mysteryBoxes: 'Mysterienboxen',
     collectRareItems: 'Sammle seltene Gegenstände, indem du Karten perfekt zusammenbringst!',
-    locked: 'Gesperrt'
+    locked: 'Gesperrt',
+    // Unlock descriptions
+    completeLevelToUnlock: 'Schließe Level {level} ab zum Freischalten!'
   },
   it: {
     selectLanguage: 'Seleziona la tua lingua',
@@ -818,7 +826,9 @@ const TRANSLATIONS = {
     mysteryBox: 'Scatola Misteriosa',
     mysteryBoxes: 'Scatole Misteriose',
     collectRareItems: 'Raccogli oggetti rari abbinando le carte perfettamente!',
-    locked: 'Bloccato'
+    locked: 'Bloccato',
+    // Unlock descriptions
+    completeLevelToUnlock: 'Completa il Livello {level} per sbloccare!'
   },
   pt: {
     selectLanguage: 'Selecione seu idioma',
@@ -960,7 +970,9 @@ const TRANSLATIONS = {
     mysteryBox: 'Caixa Misteriosa',
     mysteryBoxes: 'Caixas Misteriosas',
     collectRareItems: 'Colete itens raros combinando cartas perfeitamente!',
-    locked: 'Bloqueado'
+    locked: 'Bloqueado',
+    // Unlock descriptions
+    completeLevelToUnlock: 'Complete o Nível {level} para desbloquear!'
   },
   hr: {
     selectLanguage: 'Odaberite jezik',
@@ -1102,7 +1114,9 @@ const TRANSLATIONS = {
     mysteryBox: 'Tajanstvena Kutija',
     mysteryBoxes: 'Tajanstvene Kutije',
     collectRareItems: 'Prikupi rijetke predmete spajanjem kartica savršeno!',
-    locked: 'Zaključano'
+    locked: 'Zaključano',
+    // Unlock descriptions
+    completeLevelToUnlock: 'Završi Razinu {level} za otključavanje!'
   },
   ja: {
     selectLanguage: '言語を選択',
@@ -1244,7 +1258,9 @@ const TRANSLATIONS = {
     mysteryBox: 'ミステリーボックス',
     mysteryBoxes: 'ミステリーボックス',
     collectRareItems: 'カードを完璧にマッチさせてレアアイテムを収集しよう！',
-    locked: 'ロック済み'
+    locked: 'ロック済み',
+    // Unlock descriptions
+    completeLevelToUnlock: 'レベル{level}をクリアしてアンロック！'
   },
   ko: {
     selectLanguage: '언어 선택',
@@ -1386,7 +1402,9 @@ const TRANSLATIONS = {
     mysteryBox: '미스터리 박스',
     mysteryBoxes: '미스터리 박스',
     collectRareItems: '카드를 완벽하게 매치하여 희귀 아이템을 수집하세요!',
-    locked: '잠김'
+    locked: '잠김',
+    // Unlock descriptions
+    completeLevelToUnlock: '레벨 {level}을 완료하여 잠금 해제!'
   },
   zh: {
     selectLanguage: '选择语言',
@@ -1528,7 +1546,9 @@ const TRANSLATIONS = {
     mysteryBox: '神秘盒子',
     mysteryBoxes: '神秘盒子',
     collectRareItems: '通过完美匹配卡片收集稀有物品！',
-    locked: '已锁定'
+    locked: '已锁定',
+    // Unlock descriptions
+    completeLevelToUnlock: '完成第{level}关以解锁！'
   }
 }
 
@@ -1916,6 +1936,22 @@ export default function MemoryGame() {
     const translatedText = translationKey ? t(translationKey) : colorText
 
     return `${emoji} ${translatedText}`
+  }
+
+  // Function to translate unlock descriptions
+  const translateUnlockDescription = (unlockDescription) => {
+    if (unlockDescription === "Available from start" || unlockDescription === "Available from start!") {
+      return t('availableFromStart')
+    }
+
+    // Extract level number from "Complete Level X to unlock!"
+    const match = unlockDescription.match(/Complete Level (\d+) to unlock!/)
+    if (match) {
+      const level = match[1]
+      return t('completeLevelToUnlock').replace('{level}', level)
+    }
+
+    return unlockDescription // fallback to original if no match
   }
 
   // Function to play sounds using Web Audio API
@@ -2804,7 +2840,7 @@ export default function MemoryGame() {
                       {isUnlocked ? theme.emojis.slice(0, 3).join(' ') : '🔒🔒🔒'}
                     </div>
                     <div className="text-xs">
-                      {isUnlocked ? theme.name : theme.unlockDescription}
+                      {isUnlocked ? theme.name : translateUnlockDescription(theme.unlockDescription)}
                     </div>
                   </button>
                 )
@@ -2849,7 +2885,7 @@ export default function MemoryGame() {
                       }`}
                     >
                       <div className="text-xs font-bold" style={{ color: !isUnlocked ? '#666' : '#000' }}>
-                        {isUnlocked ? translateCardColorName(color.name) : `🔒 ${color.unlockDescription}`}
+                        {isUnlocked ? translateCardColorName(color.name) : `🔒 ${translateUnlockDescription(color.unlockDescription)}`}
                       </div>
                     </button>
                   )
@@ -2881,7 +2917,7 @@ export default function MemoryGame() {
                       }`}
                     >
                       <div className="text-xs font-bold" style={{ color: !isUnlocked ? '#666' : '#000' }}>
-                        {isUnlocked ? translateCardColorName(color.name) : `🔒 ${color.unlockDescription}`}
+                        {isUnlocked ? translateCardColorName(color.name) : `🔒 ${translateUnlockDescription(color.unlockDescription)}`}
                       </div>
                     </button>
                   )
